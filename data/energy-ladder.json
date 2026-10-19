@@ -1,0 +1,132 @@
+{
+  "status": "reviewed_saved_data_only",
+  "quantity": "electronic energy; no ZPE or Gibbs correction",
+  "Gaussian_global_reference": "sum of separately optimized near-s-cis butadiene and ethylene",
+  "Gaussian_global_states": [
+    {
+      "key": "R",
+      "label": "Separated R",
+      "id": "3010 + 3009",
+      "E_kcal_mol": 0.0
+    },
+    {
+      "key": "RC",
+      "label": "Weak complex",
+      "id": "3344",
+      "E_kcal_mol": -2.7918112360650014
+    },
+    {
+      "key": "TS_DA",
+      "label": "Cycloaddition TS",
+      "id": "3025",
+      "E_kcal_mol": 12.948930971120243
+    },
+    {
+      "key": "B",
+      "label": "Cyclohexene B",
+      "id": "3303",
+      "E_kcal_mol": -45.80975013632265
+    },
+    {
+      "key": "TS_conf_candidate",
+      "label": "Conformer TS",
+      "id": "3346",
+      "E_kcal_mol": -45.781542687002165
+    },
+    {
+      "key": "A",
+      "label": "Cyclohexene A",
+      "id": "3011",
+      "E_kcal_mol": -51.373457666884384
+    }
+  ],
+  "conformer_rows": [
+    {
+      "label": "ORCA NEB",
+      "stage_step": 35,
+      "A": 5.826514172045715,
+      "B": 0.2629490963813717,
+      "type": "highest sampled image; not final refined saddle"
+    },
+    {
+      "label": "ORCA CI-NEB",
+      "stage_step": 50,
+      "A": 5.591076888204817,
+      "B": 0.027511812540474575,
+      "type": "highest sampled image; not final refined saddle"
+    },
+    {
+      "label": "ORCA refined TS",
+      "A": 5.590722402445566,
+      "B": 0.02715732678122343,
+      "type": "optimized first-order saddle"
+    },
+    {
+      "label": "Gaussian TS3346",
+      "A": 5.591914979882218,
+      "B": 0.028207449320478355,
+      "type": "optimized first-order saddle"
+    }
+  ],
+  "conformer_reference": "Each program uses its own optimized minima. All ORCA rows use the same fresh endpoint NumFreq energies; not the slightly grid-rotation-dependent NEB endpoint reevaluations.",
+  "ORCA_endpoint_reference_E_hartree": {
+    "A": -234.504280475387,
+    "B": -234.495414370084
+  },
+  "ORCA_conformer_frequency_cm_1": -67.56320681460244,
+  "Gaussian_comparison": {
+    "proper_rotation_determinant": 0.999999999999999,
+    "RMSD_A": 0.0020888312433180265,
+    "maximum_atom_difference_A": 0.0039302788668471745,
+    "atom_to_Gaussian_1based": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "mode_cosine_abs": 0.999981224977249,
+    "ORCA_candidate_heights_kcal_mol": {
+      "A": 5.590722402445566,
+      "B": 0.02715732678122343
+    },
+    "Gaussian_candidate_heights_kcal_mol": {
+      "A": 5.591914979882218,
+      "B": 0.028207449320478355
+    },
+    "Gaussian_frequency_cm_1": -66.2381,
+    "interpretation": "Geometry/mode comparison only; IRC connectivity remains unverified. Absolute energies not mixed."
+  },
+  "confirmed_IRC_links": [
+    [
+      "RC",
+      "TS_DA"
+    ],
+    [
+      "TS_DA",
+      "B"
+    ]
+  ],
+  "A_B_CI_NEB_converged": true,
+  "A_B_IRC_confirmed": false,
+  "IRC_action": "User stopped further conformer IRC; no retry or continuation.",
+  "new_quantum_calculations": 0,
+  "caveats": [
+    "Horizontal positions are schematic; these are discrete levels, not an IRC curve.",
+    "Association of separated reactants with RC has not been mapped.",
+    "CI-NEB supports the A/B candidate path; two-sided IRC is incomplete.",
+    "The shallow B-side electronic height is not an accurately known rate barrier.",
+    "Gaussian and ORCA absolute energies are never combined."
+  ]
+}

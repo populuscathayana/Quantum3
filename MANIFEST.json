@@ -1,0 +1,325 @@
+{
+  "description": "Published scientific files; hostname/workspace/temp metadata redacted, numerical data unchanged",
+  "files": {
+    "data/README.md": {
+      "bytes": 1896,
+      "sha256": "8edd6625d1db31ce602a342b533682cd3c48f4bd064326c8b88e7e4aa9713b9d"
+    },
+    "data/conformer-audit.json": {
+      "bytes": 15594,
+      "sha256": "ae653e3210cf54fc7273d1dd0fdeb4bef452dc63c840b0e9aa78d50761027915"
+    },
+    "data/conformer-bands.json": {
+      "bytes": 206648,
+      "sha256": "f270da25d5b4aa0232e280400cf653857ac52eb26e7022830d9854326be91fa1"
+    },
+    "data/cycloaddition-ci400/climbing-ci400.xyz": {
+      "bytes": 719,
+      "sha256": "80422f426794da33e45e67646ff41a1699fa752371993518c3531894a8a7b6b5"
+    },
+    "data/cycloaddition-ci400/geometry-mode.json": {
+      "bytes": 8840,
+      "sha256": "1f77f015887c19c4ef913129abbb70822777b3983bdd681ea23a74a89d7d8b8d"
+    },
+    "data/cycloaddition-ci400/path-data.json": {
+      "bytes": 4805,
+      "sha256": "552a776142c907911686b070b48d389d82c2006e106bed8f727078c99a1d2549"
+    },
+    "data/energy-ladder.json": {
+      "bytes": 3540,
+      "sha256": "1d16c1d6efe337dd8ca08d9d28b906f852f500fd9795f31930ae73bded7e7338"
+    },
+    "data/irc.json": {
+      "bytes": 91780,
+      "sha256": "a7eb6c5dd4f7d3fad0e64975b68f636116c7ece73b2986c6864fd01b2a030f1e"
+    },
+    "data/path-comparison.json": {
+      "bytes": 36420,
+      "sha256": "806ce1da69c00b92c69a770df807eb1bc1a4b4b948f99148d1ad43c557b5dfbd"
+    },
+    "data/structures/A-3011-mapped.xyz": {
+      "bytes": 703,
+      "sha256": "48e88682fff2bd325a24f6a40ffaeaade1dda540a59251ca7f5e66c7969ed9ec"
+    },
+    "data/structures/B-3303.xyz": {
+      "bytes": 696,
+      "sha256": "5a7f2927b415580ac149ba9e5136319bd89307387ea4817a14fd500ad0d19774"
+    },
+    "data/structures/Gaussian-conformer-TS3346.xyz": {
+      "bytes": 730,
+      "sha256": "009435003cdca5cb6ecc68387ea83cf629b7e335e4a8fdeb71208ab95125732e"
+    },
+    "data/structures/butadiene-opt-optimized.xyz": {
+      "bytes": 464,
+      "sha256": "c8748048d0066230148be215fd6de9f8234d2d321cdb6cd5d3d8e246c0c6044c"
+    },
+    "data/structures/ethylene-opt-optimized.xyz": {
+      "bytes": 292,
+      "sha256": "2268d86d4c8060f914aaaef9facf3a8811c07d272ec1eb9de8a20ce48148e1cb"
+    },
+    "data/structures/ts-optimized.xyz": {
+      "bytes": 688,
+      "sha256": "90f47ce891e9b27348b66a25d585ca61e9c8acfca9ec46c4043fafac89bc447e"
+    },
+    "data/thermochemistry.json": {
+      "bytes": 25751,
+      "sha256": "61cc6b04991309242976f982c862d4181af1de94121bad9d31a9b17f730f1e51"
+    },
+    "sources/gaussian/butadiene-opt/calc.fchk": {
+      "bytes": 440161,
+      "sha256": "6795eb799d816100362aa88558f67926ce3c588b601cef4381f593aa42dc58ea"
+    },
+    "sources/gaussian/butadiene-opt/calc.gjf": {
+      "bytes": 620,
+      "sha256": "d3b7b1c6a12c8df7cb1a61d21ed58aa2eca8de09ececa2155d355322b18ac916"
+    },
+    "sources/gaussian/butadiene-opt/calc.out": {
+      "bytes": 315564,
+      "sha256": "4caf9b32732bd1e7b22981494c644c1ccb3061fcf28d34f16a1b5ca502568d7c"
+    },
+    "sources/gaussian/cyclohexene-conf-ts/calc.fchk": {
+      "bytes": 982575,
+      "sha256": "ec6c8bddf62cb0032d1f8095020fded7e4f2c9dc30fe2bbc97b5bf05915ddccb"
+    },
+    "sources/gaussian/cyclohexene-conf-ts/calc.gjf": {
+      "bytes": 1739,
+      "sha256": "8f1f425c39967e44f868057e902cf93a9b9500385744bd849539bf1290911054"
+    },
+    "sources/gaussian/cyclohexene-conf-ts/calc.out": {
+      "bytes": 642433,
+      "sha256": "5ecadb41ed91df761b6e3ef66607ebe7b11e0af42d955fab9a5cbb56a1f94625"
+    },
+    "sources/gaussian/cyclohexene-opt/calc.fchk": {
+      "bytes": 982550,
+      "sha256": "0b9870ab24614bbe1f80f29e1bfffce039ada3accb51795bd2eab893405ea5d7"
+    },
+    "sources/gaussian/cyclohexene-opt/calc.gjf": {
+      "bytes": 874,
+      "sha256": "7f9e0f28eb0a2f770962f4df82364b57adbea97dce27e9c7ac1d7513fb37043a"
+    },
+    "sources/gaussian/cyclohexene-opt/calc.out": {
+      "bytes": 290599,
+      "sha256": "2f64164c56b9355f892ccf386f7a5d38389bf6762ccc327b67e1a13354abbd7a"
+    },
+    "sources/gaussian/ethylene-opt/calc.fchk": {
+      "bytes": 198860,
+      "sha256": "761069e53aef5308a266d5eedf6bfffe48b1599855ee61d0dd6c8fcc967bddc9"
+    },
+    "sources/gaussian/ethylene-opt/calc.gjf": {
+      "bytes": 451,
+      "sha256": "5b0164d9901974e85389fbb4097559af88d57610a412875885473d8905e3dd05"
+    },
+    "sources/gaussian/ethylene-opt/calc.out": {
+      "bytes": 134560,
+      "sha256": "f0b0a6f5acb836b229f814ae32659b07e9f77862f84b978ee9742d54eda38b93"
+    },
+    "sources/gaussian/irc-forward-3099/calc.gjf": {
+      "bytes": 275,
+      "sha256": "add716fbe3eaa4088b0682c2625751310850c64dc5eb8e486312675c58d4f522"
+    },
+    "sources/gaussian/irc-forward-3099/calc.out": {
+      "bytes": 3184815,
+      "sha256": "cf9754d12ffebe808bba04a905889c51eeaf62f88201df91459f1c27d0ad4b2e"
+    },
+    "sources/gaussian/irc-forward-3286/calc.gjf": {
+      "bytes": 1062,
+      "sha256": "136dfcae0d2caf6a6d10e036883931d4c24f28af7e5b71e9b382cc320ecaffee"
+    },
+    "sources/gaussian/irc-forward-3286/calc.out": {
+      "bytes": 213141,
+      "sha256": "a5bccdbfba9ca12f4624c7ecf6484dc3a0068b28e67afb9fd23972658c2760f0"
+    },
+    "sources/gaussian/irc-reverse-3100/calc.gjf": {
+      "bytes": 275,
+      "sha256": "3994f347c8628742a9722fcc4278112e5069254b0d39a289b0174dca2941b224"
+    },
+    "sources/gaussian/irc-reverse-3100/calc.out": {
+      "bytes": 957696,
+      "sha256": "ba7e59ffc4cf9fe81331eac2fab229e182879574b839d4f84985b5c92a0fbecd"
+    },
+    "sources/gaussian/product-endpoint-opt/calc.fchk": {
+      "bytes": 982575,
+      "sha256": "a8c3c91d5b1f7a3dfcb3ca5d3b81c6388b7b2fe0f3c75cd247b70f3a56ef09a3"
+    },
+    "sources/gaussian/product-endpoint-opt/calc.gjf": {
+      "bytes": 947,
+      "sha256": "5098e3292cb0cbfdc10f75308800d24a2f3df69a64b897e17124efae0d42f6af"
+    },
+    "sources/gaussian/product-endpoint-opt/calc.out": {
+      "bytes": 264663,
+      "sha256": "cde33ceca653344c45dab745138756f1df8799a0ef1b845e73d3ffccb6d6bda4"
+    },
+    "sources/gaussian/reactant-endpoint-opt/calc.fchk": {
+      "bytes": 974805,
+      "sha256": "6e002cecf1f9237b7fc7adfd2d363e30964d64e59717d63101accaee1b725db3"
+    },
+    "sources/gaussian/reactant-endpoint-opt/calc.gjf": {
+      "bytes": 944,
+      "sha256": "351129dbfceaa95326126258e25fc1770d8fd9aedf57307e31b6d5f296acd8b6"
+    },
+    "sources/gaussian/reactant-endpoint-opt/calc.out": {
+      "bytes": 1116703,
+      "sha256": "1b609a55e07f6addaeaf7387750699fde2107ef6dad297555cea2b24df72cc0c"
+    },
+    "sources/gaussian/ts-opt/calc.fchk": {
+      "bytes": 1001517,
+      "sha256": "d23eb4276e141814e73c8fd81f3cc23b9c84c7f60c58db7c47d0c5fc55a475cd"
+    },
+    "sources/gaussian/ts-opt/calc.gjf": {
+      "bytes": 948,
+      "sha256": "45a24ee6463049397175b95d2170ff595c338408060e8d90d92180a23de3136b"
+    },
+    "sources/gaussian/ts-opt/calc.out": {
+      "bytes": 222549,
+      "sha256": "624078f7f519560dbadce3cba22e1989f7b0766410a4a8804bcf78f293364eed"
+    },
+    "sources/orca/conformer-A/calc.engrad": {
+      "bytes": 1971,
+      "sha256": "f5df6f8d2b57e4431c4f650bbf506ef6bd3883f1b65c94cfd672d943514913d0"
+    },
+    "sources/orca/conformer-A/calc.hess": {
+      "bytes": 108018,
+      "sha256": "637abb8618c3a7bf4e8a81b5bf39827849df6a5c3c4f840c42fba1cb1cdc7210"
+    },
+    "sources/orca/conformer-A/calc.inp": {
+      "bytes": 1030,
+      "sha256": "4b39964b9332887afef5fe7283dd70821f1e604b870c14a42406aa5016f77663"
+    },
+    "sources/orca/conformer-A/calc.out": {
+      "bytes": 118131,
+      "sha256": "a5752af26ded42e394e636245fd269391d59b9d4c3c6c59142ea55aeb4cac1d6"
+    },
+    "sources/orca/conformer-B/calc.engrad": {
+      "bytes": 1971,
+      "sha256": "ec3a4ba79fe480e8a8f7cb7004a7a7428b8772f57d37d5042255e992eb88b0d0"
+    },
+    "sources/orca/conformer-B/calc.hess": {
+      "bytes": 108018,
+      "sha256": "6912ebfdfebb2cc13c8b334bcc1c1826786d531e0067fab7ab78a58fef8c5399"
+    },
+    "sources/orca/conformer-B/calc.inp": {
+      "bytes": 1031,
+      "sha256": "82999cbb73d36ca28e557a58c6947cfc6e067d93d6bb0a4223764f336011bc5c"
+    },
+    "sources/orca/conformer-B/calc.out": {
+      "bytes": 117005,
+      "sha256": "c1b2f9aa6bb5786a4ed235b89f7b4cadb21faece22ab1e2b155b3ff466f437da"
+    },
+    "sources/orca/conformer-TS/calc.engrad": {
+      "bytes": 1971,
+      "sha256": "a8e610450de215fb9c38d2fbf1003155266ee1ad4b413d8472bd21c3ae80c98e"
+    },
+    "sources/orca/conformer-TS/calc.hess": {
+      "bytes": 108018,
+      "sha256": "d4b79fe2b772a6ec03864ff285843c474ba0eb09d20f0fe5ab111c3a29f8fa6e"
+    },
+    "sources/orca/conformer-TS/calc.inp": {
+      "bytes": 1032,
+      "sha256": "b22787175a2fb6313abfe2ef0377385a5ef50f3adc9669ed074470637623a927"
+    },
+    "sources/orca/conformer-TS/calc.out": {
+      "bytes": 117383,
+      "sha256": "66c6b6bb26cbbba92bfe6f6b47e1068134d405f3c38f45e72e46c6b5556d75b5"
+    },
+    "sources/orca/conformer-TS-opt/calc.engrad": {
+      "bytes": 1971,
+      "sha256": "c3cb585afb8d0f81457de70395913eebed83759c2ab2527a8bae085ac542d2f2"
+    },
+    "sources/orca/conformer-TS-opt/calc.hess": {
+      "bytes": 107391,
+      "sha256": "bc0ba2e16172e4bf91407efe4ebf831fb9ce37b0018517750ec549428bb61b3c"
+    },
+    "sources/orca/conformer-TS-opt/calc.inp": {
+      "bytes": 1118,
+      "sha256": "d9ab3b698c11ff19cd3af175c739acfdec52c9af4e6adb0b072ff662d2f0b0d7"
+    },
+    "sources/orca/conformer-TS-opt/calc.out": {
+      "bytes": 264954,
+      "sha256": "230b6cec53c5ad909b74a5e1868701fad83a5f8caa09bc0421a6b03641dbc93c"
+    },
+    "sources/orca/conformer-TS-opt/calc.xyz": {
+      "bytes": 1254,
+      "sha256": "4f3c31174aa7b858934ef531ed38445a0758eb9e6580038dfdfc1e9e18327804"
+    },
+    "sources/orca/cycloaddition-CI400/calc.engrad": {
+      "bytes": 1971,
+      "sha256": "bbb47cbdecb452249e6cd790ce3277fc55ac8503860a5c3448bb3538e9ea3657"
+    },
+    "sources/orca/cycloaddition-CI400/calc.hess": {
+      "bytes": 108018,
+      "sha256": "c84cc54aeb4f7cee71ed4ec43a66d1a5a0e548ff59f0614c78a87a0208f7b6d7"
+    },
+    "sources/orca/cycloaddition-CI400/calc.inp": {
+      "bytes": 1031,
+      "sha256": "b8562ff8e1cdc5dbf5d4de7894f7fad4b868af821c5b3375bba37322e45b9d3e"
+    },
+    "sources/orca/cycloaddition-CI400/calc.out": {
+      "bytes": 116512,
+      "sha256": "04a83aa6aefc947cbc2e207f690ed584625e6395349030f173c660b7826b41a4"
+    },
+    "experiment-report/cycloaddition_mechanism.pdf": {
+      "bytes": 2184930,
+      "sha256": "a118dc87372ef4cb73a8c8abc37909c11ca7b02d780481098aee6f5fc6d77c3b"
+    },
+    "experiment-report/cycloaddition_mechanism.tex": {
+      "bytes": 29569,
+      "sha256": "d691a96ef2b4dfe8a0abb8b2a8d7881af32295fa5f9f92f8ca657dc39b7bd8af"
+    },
+    "experiment-report/figures/cineb-ci400-imaginary-mode.gif": {
+      "bytes": 342409,
+      "sha256": "9e19048a090ee91d359ae4c2228b44aff764cda1de49819e8c5d597b097f9cb7"
+    },
+    "experiment-report/figures/cineb-ci400-review.png": {
+      "bytes": 157653,
+      "sha256": "83ac63b6590a646594f7b24de13cb86717875b27f4a1edd22082ebe971ebbac2"
+    },
+    "experiment-report/figures/electronic-energy-ladder-complete.png": {
+      "bytes": 240971,
+      "sha256": "aea7a666fa4b8391de4b71d73e66bab15660fd5b25fd6b1009dcee48695aaa4a"
+    },
+    "experiment-report/figures/frontier-orbital-levels.png": {
+      "bytes": 86595,
+      "sha256": "b5736920b32fdd282b569902fbb92fb84a4f09c743e30321af822a370463dbb0"
+    },
+    "experiment-report/figures/frontier-orbital-surfaces.png": {
+      "bytes": 321241,
+      "sha256": "ad8cca4758134f4c3d8eaebd2d4e5744e8a16bcb406b23dc7bf45e24207ba5c3"
+    },
+    "experiment-report/figures/frontier-phase-matching.png": {
+      "bytes": 338728,
+      "sha256": "c801bf1f7edbea6b1858f13d879060f2ca5134e196ed8d860e825fef106e4627"
+    },
+    "experiment-report/figures/gibbs-free-energy-profile.png": {
+      "bytes": 124579,
+      "sha256": "5130c4fb485be4173fbe34b4e3ce2cf153d9e8e84858021b198f70c29277d28e"
+    },
+    "experiment-report/figures/irc-full-path.gif": {
+      "bytes": 2487580,
+      "sha256": "81c19a1ef650ef22d1f895a18cdcee23f65d1989b075d42e78a7d054a1ba2c1e"
+    },
+    "experiment-report/figures/irc-full-profile.png": {
+      "bytes": 110108,
+      "sha256": "f8b547f96142701770013ada888c2f3fe2f5495528aaf39031642ac8e8746090"
+    },
+    "experiment-report/figures/irc-full-structures.png": {
+      "bytes": 81577,
+      "sha256": "c41237cf10c048fcfe8adb31c0cdd398e21ea741bf16835df464cd80a591d0fd"
+    },
+    "experiment-report/figures/neb-cineb-irc-comparison.png": {
+      "bytes": 189598,
+      "sha256": "fd25307effa99993342d0fcd1f390ad7f3db31a49d9ac39fc34abc8a790b01e3"
+    },
+    "experiment-report/figures/optimized-structures.png": {
+      "bytes": 112603,
+      "sha256": "e4b48de9906265e4d8c5d4df524da7e55a31d82cbce8aacd179bdf73b49e0e02"
+    },
+    "experiment-report/figures/ts-imaginary-mode.gif": {
+      "bytes": 971509,
+      "sha256": "1a1101152a4a550ed243cf76a3311dd35d4df8afba7c24c512df0e770b614571"
+    },
+    "experiment-report/figures/ts-imaginary-mode.png": {
+      "bytes": 70675,
+      "sha256": "8e51817c463e628672e740f767cb4e823a678784f0122241a7c16e442e3800f0"
+    }
+  }
+}

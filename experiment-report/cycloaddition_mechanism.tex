@@ -1,0 +1,422 @@
+% !TeX program = xelatex
+% Figures are relative to this source.
+\documentclass[a4paper,12pt]{article}
+\usepackage{fontspec,xeCJK}
+\usepackage{graphicx,amsmath,amssymb,array,tabularx,booktabs}
+\usepackage{float,caption,titlesec,geometry,xcolor,listings,xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage[section]{placeins}
+\IfFontExistsTF{Songti SC}{\setCJKmainfont[AutoFakeBold=2.5]{Songti SC}}{\setCJKmainfont{FandolSong-Regular}}
+\IfFontExistsTF{Heiti SC}{\setCJKsansfont[AutoFakeBold=2.5]{Heiti SC}}{\setCJKsansfont{FandolHei-Regular}}
+\IfFontExistsTF{Kaiti SC}{\setCJKmonofont{Kaiti SC}}{\setCJKmonofont{FandolKai-Regular}}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\IfFontExistsTF{Menlo}{\setmonofont{Menlo}[Scale=0.85]}{\setmonofont{Latin Modern Mono}[Scale=0.85]}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip=0pt plus 1pt minus 0.1pt
+\newcommand{\xiaoyi}{\fontsize{24pt}{36pt}\selectfont}
+\newcommand{\erhao}{\fontsize{22pt}{28pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{24pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{22pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{21pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{18pt}\selectfont}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\titleformat{\section}{\sffamily\sihao\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\sffamily\xiaosi\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\section}{0pt}{0.9em}{0.45em}
+\titlespacing*{\subsection}{0pt}{0.7em}{0.3em}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.18}
+\captionsetup{font=small,labelfont=bf,labelsep=colon}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\definecolor{codebg}{RGB}{244,246,248}
+\lstset{backgroundcolor=\color{codebg},basicstyle=\ttfamily\footnotesize,
+ breaklines=true,columns=fullflexible,keepspaces=true,frame=single,
+ rulecolor=\color{codebg},showstringspaces=false,aboveskip=0.6em,belowskip=0.6em}
+\urlstyle{tt}
+\newcommand{\ReportTitle}{环加成反应的机理研究}
+\newcommand{\kcalmol}{\mathrm{kcal\,mol^{-1}}}
+\hypersetup{pdftitle={环加成反应的机理研究},pdfauthor={叶青杨}}
+
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+{\xiaoyi\bfseries 浙江大学量子化学实验\par}
+\vspace{1cm}
+{\sffamily\xiaoer \ReportTitle\par}
+\vspace{0.7cm}
+{\sffamily\erhao\bfseries 实\\[0.32cm]验\\[0.32cm]报\\[0.32cm]告\par}
+\vfill
+{\sihao 参加学生：叶青杨\par}
+\vspace{1cm}
+{\xiaoer\bfseries 浙江大学化学实验教学中心\par}
+\vspace{0.5cm}
+{\xiaoer\bfseries 2026年10月15日\par}
+\end{titlepage}
+\setcounter{page}{1}
+\begin{center}
+{\sffamily\xiaosan\bfseries \ReportTitle\par}
+\vspace{0.4em}
+{\xiaosi 叶青杨\par}
+\end{center}
+\xiaosi
+
+\section{实验目的}
+以 1,3-丁二烯与乙烯生成环己烯的 Diels--Alder 反应为对象，学习限制性优化、过渡态搜索与频率分析，利用内禀反应坐标（IRC）确认反应通道；比较各驻点的 Gibbs 自由能，并通过前线轨道相位解释协同成键特征\cite{course}。进一步比较环己烯的两个局部稳定构象，考察其构象转化。
+
+\section{实验原理与计算方法}
+\subsection{驻点、频率与反应路径}
+在 Born--Oppenheimer 势能面上，驻点满足 $\nabla E=0$。质量加权 Hessian 的本征值决定振动频率的平方；扣除整体平移和转动后，局部极小值的 $3N-6$ 个振动本征值均为正，一阶鞍点恰有一个负本征值。与该负本征值对应的虚频模式给出势能下降方向。IRC 从过渡态沿质量加权坐标中的最陡下降方向追踪两侧势能面，通过端点优化确定所连接的极小值。
+
+本实验的共同碳编号为：丁二烯 C1--C2--C3--C4，乙烯 C5--C6；形成的新键为 C1--C5 和 C4--C6，环己烯中保留 C2=C3 双键。
+
+\subsection{电子结构计算}
+主要计算采用 Gaussian 16 的 B3LYP-D3(BJ)/def2-SVP 方法，在气相、中性单重态条件下进行。D3(BJ) 为带 Becke--Johnson 阻尼的色散修正。Gaussian 各步骤统一采用 \texttt{SCF=(Tight,XQC)}、\texttt{Int=UltraFine} 和 \texttt{NoSymm}。普通极小值的主要输入为
+\begin{lstlisting}
+#p B3LYP/Def2SVP EmpiricalDispersion=GD3BJ
+   SCF=(Tight,XQC) Int=UltraFine NoSymm
+   Opt=(CalcFC,Tight,MaxCycles=200) Freq
+\end{lstlisting}
+独立丁二烯的初始中央单键扭角设为 $30^\circ$，随后自由优化；环加成初猜则采用平面 s-cis 丁二烯，使乙烯靠近两端，并将两条形成键均设为 $2.27\ \mathrm{\AA}$。
+
+先冻结两条形成键距离，优化其余自由度：
+\begin{lstlisting}
+Opt=(ModRedundant,CalcFC,Tight,MaxCycles=200)
+
+B 1 5 F
+B 4 6 F
+\end{lstlisting}
+以所得结构为初猜，删除冻结坐标，进行无约束过渡态优化和频率分析：
+\begin{lstlisting}
+Opt=(TS,CalcFC,NoEigenTest,Tight,MaxCycles=200) Freq
+\end{lstlisting}
+限制性优化所得结构用于过渡态搜索，热力学量取自最终无约束驻点。通过收敛梯度、唯一虚频及 IRC 连接关系确定过渡态。
+
+另以 ASE/ORCA 6.1.1 进行距离引导的 CI-NEB 复核。电子结构模型为 B3LYP-D3(BJ)/def2-SVP，ORCA 采用 \texttt{B3LYP/G}、\texttt{NoRI NoCOSX VeryTightSCF DEFGRID3}；其中 \texttt{B3LYP/G} 对应 Gaussian 的泛函定义，积分网格采用 ORCA 的 DEFGRID3\cite{orca-dft}。弱结合复合物与环己烯 B 作为固定端点，共 17 个图像；以约 $2.27\ \mathrm{\AA}$ 的成键距离引导势垒附近的初猜加密，正式 NEB 中解除内部图像的全部几何约束。直接在最终爬山图像上，用解析梯度的中心差分（步长 $0.005\ \mathrm{bohr}$）计算独立数值 Hessian\cite{orca-freq}。
+
+构象转化计算从分别优化并经独立数值频率验证的 A、B 出发，仅用端点插值和 IDPP 构建 17 图像初猜。普通 NEB 与 CI-NEB 的整带最大有效力判据分别为 $0.05$ 与 $0.01\ \mathrm{eV\,\AA^{-1}}$；爬山图像随后进行无约束 OptTS 精修及独立数值 Hessian 计算。NEB 沿路径比较电子能，驻点自由能另由频率热校正得到。
+
+\subsection{IRC 与热化学处理}
+环加成 IRC 从最终过渡态几何及频率计算的 Hessian 出发，分别追踪两个方向，采用 RCFC/HPC、Tight 收敛及定期 Hessian 更新。初始名义步长为 $0.10\ \mathrm{bohr}$，反应物侧近端点段采用 $0.05\ \mathrm{bohr}$。检查每个接受点的能量、反应坐标与成键距离，并对两端结构分别优化、计算频率。
+
+热化学量采用 $298.15\ \mathrm{K}$、$1\ \mathrm{atm}$ 下的理想气体刚性转子--谐振子（RRHO）近似，频率不缩放。$G_{\rm out}$ 直接取最终频率输出的 \texttt{Sum of electronic and thermal Free Energies}，其中已含零点能与热校正\cite{thermo}。外转动对称数按保持原子种类和连接关系的正旋转确定；若其与输出采用的值不同，则
+\begin{equation}
+G=G_{\rm out}+RT\ln\frac{\sigma}{\sigma_{\rm out}}.
+\label{eq:sigma}
+\end{equation}
+乙烯的 $\sigma=4$，丁二烯与环己烯 A 的 $\sigma=2$，其余驻点为 1。丁二烯与 A 的输出采用 $\sigma_{\rm out}=1$，故各加入 $RT\ln2=0.410679\ \kcalmol$；其余不变。镜面反射不计入外转动对称数。
+
+以本次优化的近 s-cis 扭曲丁二烯与乙烯两个分离反应物为参考，定义
+\begin{align}
+\Delta G^{\ddagger}&=G(\mathrm{TS})-[G(\text{丁二烯})+G(\text{乙烯})],\\
+\Delta_{\mathrm r}G&=G(\text{环己烯})-[G(\text{丁二烯})+G(\text{乙烯})].
+\end{align}
+每种物质采用单一优化构象的配分函数。Hartree 与能量单位的换算采用 $1\ E_{\rm h}=627.509474\ \kcalmol$。
+
+\section{结果与分析}
+\subsection{优化结构与过渡态的确认}
+乙烯、丁二烯及环己烯 A 均得到无虚频的局部极小值（图~\ref{fig:structures}）。丁二烯的 C1--C2--C3--C4 二面角为 $26.90^\circ$，属于近 s-cis 扭曲构象，而不是平面 s-cis 结构。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/optimized-structures.png}
+\caption{独立反应物、环加成过渡态及环己烯 A 的优化结构。图中环己烯为独立优化所得构象 A；IRC 直接连接的构象 B 见图~\ref{fig:irc-structures}。}
+\label{fig:structures}
+\end{figure}
+
+\begin{table}[htbp]
+\centering\small
+\caption{各驻点的振动分析。频率单位为 $\mathrm{cm^{-1}}$。}
+\label{tab:frequency}
+\begin{tabular}{lrrr}
+\toprule
+体系 & 模式总数 & 虚频数 & 最低频率\\
+\midrule
+乙烯 & 12 & 0 & 822.86\\
+近 s-cis 丁二烯 & 24 & 0 & 138.06\\
+反应物复合物 & 42 & 0 & 29.62\\
+环加成 TS & 42 & 1 & $517.19i$\\
+环己烯 B & 42 & 0 & 45.46\\
+环己烯 A & 42 & 0 & 170.08\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+环加成过渡态的 42 个振动模式中恰有一个虚频 $517.19i\ \mathrm{cm^{-1}}$。其位移使 C1--C5 与 C4--C6 同时缩短或伸长（图~\ref{fig:mode}）。两条形成键分别为 $2.271199$ 和 $2.271181\ \mathrm{\AA}$，相差仅约 $2\times10^{-5}\ \mathrm{\AA}$，显示该过渡态具有近同步的双端成键特征。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.91\linewidth]{figures/ts-imaginary-mode.png}
+\caption{环加成过渡态的唯一虚频模式。箭头为放大的正常模式位移，所示方向对应两条新键协同形成；反向位移对应协同断裂。}
+\label{fig:mode}
+\end{figure}
+
+\subsection{IRC 路径与端点结构}
+双向路径共包含 54 个接受点：反应物侧 34 点、产物侧 20 点。以 TS 的电子能为零点，沿两侧路径能量均下降（图~\ref{fig:irc}）；两条新键距离随路径近乎同步变化。此处横坐标为质量加权反应坐标，图中将反应物侧定义为负、产物侧定义为正。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/irc-full-profile.png}
+\caption{环加成 IRC 的电子势能和两条成键距离，曲线连接逐点计算结果。}
+\label{fig:irc}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/irc-full-structures.png}
+\caption{IRC 两端与 TS 的代表结构。左右结构为路径末点，随后进行无约束优化及频率分析。}
+\label{fig:irc-structures}
+\end{figure}
+
+反应物侧端点经优化得到丁二烯--乙烯弱结合复合物，42 个模式均为实频；$\mathrm{C1\cdots C5}$ 与 $\mathrm{C4\cdots C6}$ 距离为 $3.626$ 和 $3.657\ \mathrm{\AA}$，未形成新的共价键。碎片内部键长与独立反应物相比，最大差异分别为 $0.00065$ 和 $0.00125\ \mathrm{\AA}$。产物侧端点则得到环己烯 B，同样具有 42 个实频。其两条新键均为 $1.5455\ \mathrm{\AA}$，C2=C3 为 $1.3395\ \mathrm{\AA}$。因此，该过渡态连接反应物复合物与环己烯 B。
+
+\begin{table}[htbp]
+\centering\small
+\caption{环加成 TS 与两个环己烯构象的主要碳--碳距离（$\mathrm{\AA}$）。}
+\label{tab:bonds}
+\begin{tabular}{lrrr}
+\toprule
+原子对 & TS & B & A\\
+\midrule
+C1--C2 & 1.3834 & 1.5062 & 1.5074\\
+C2--C3 & 1.4086 & 1.3395 & 1.3397\\
+C3--C4 & 1.3834 & 1.5062 & 1.5074\\
+C5--C6 & 1.3861 & 1.5515 & 1.5315\\
+C1--C5 & 2.2712 & 1.5455 & 1.5336\\
+C4--C6 & 2.2712 & 1.5455 & 1.5336\\
+\bottomrule
+\end{tabular}
+\end{table}
+表~\ref{tab:bonds} 表明，反应过程中两条新 $\sigma$ 键形成，原丁二烯中央 C2--C3 键缩短为双键，而 C1--C2、C3--C4 与乙烯 C5--C6 均转为单键。唯一虚频、双端同步的距离变化及端点连接关系共同支持本通道的协同环加成机理。
+
+\subsection{NEB、CI-NEB 与原 TS、IRC 的能垒比较}
+普通 NEB 用离散图像逼近反应路径；CI-NEB 去除爬山图像的弹簧力，并反转沿路径方向的真实力分量，使该图像趋近鞍点\cite{ase-neb}。本节比较同一条 17 图像路径的普通 NEB 与 CI-NEB 末态，峰值均取最高图像的电子能。Gaussian IRC 以原优化 TS 为起点，沿两侧下降至反应物和产物区域\cite{orca-irc}。
+
+两程序分别以同一弱结合复合物几何在本程序中的电子能为零点。表~\ref{tab:path-barriers} 中 CI-NEB 与 Gaussian 的电子能垒相差 $-0.0026\ \kcalmol$。在原 Gaussian TS 几何上以 ORCA 求能，得到复合物参照的高度 $15.7380\ \kcalmol$，与 CI-NEB 峰顶仅差 $0.00012\ \kcalmol$，两种方法给出的电子势垒高度一致。
+
+\begin{table}[htbp]
+\centering\small
+\caption{以各自程序的弱结合复合物为零点的电子势垒高度。}
+\label{tab:path-barriers}
+\begin{tabular}{lrp{6.3cm}}
+\toprule
+结果 & $\Delta E^\ddagger$ / $\kcalmol$ & 含义\\
+\midrule
+ORCA 普通 NEB & 15.7360 & 最高离散图像\\
+ORCA CI-NEB & 15.7381 & 经独立数值频率分析的爬山图像\\
+Gaussian 优化 TS & 15.7407 & 原无约束优化得到的一阶鞍点\\
+Gaussian IRC 的 TS 点 & 15.7407 & 原优化 TS，双向 IRC 的共同起点\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+普通 NEB 整带最大有效力为 $0.041342\ \mathrm{eV\,\AA^{-1}}$，达到 $0.05\ \mathrm{eV\,\AA^{-1}}$ 标准。峰顶真实最大原子力为 $0.021862\ \mathrm{eV\,\AA^{-1}}$，两条成键距离为 $2.267221/2.267279\ \mathrm{\AA}$。CI-NEB 将峰值能量提高了 $0.0021\ \kcalmol$，同时大幅降低峰顶残余力，使结构更接近驻点。
+
+图~\ref{fig:path-comparison} 用两条成键距离的平均值 $q=[r(\mathrm{C1-C5})+r(\mathrm{C4-C6})]/2$ 对照三条路径，并按原始点序连线。三者呈现相同的总体成键趋势，峰顶接近，差别主要集中在反应物侧。CI-NEB 在这一侧的 $q$ 先增后减，反映了分子接近过程中的构型调整。NEB 的笛卡尔路径和 Gaussian 的质量加权 IRC 采用不同的路径度量，离散采样及其余自由度的变化也会影响投影曲线。
+
+原 IRC 的反应物侧、产物侧最后一点分别比进一步优化后的极小值高 $0.5026$、$0.0498\ \kcalmol$。以反应物侧末点为参考，TS 高度为 $15.2382\ \kcalmol$；以优化后的复合物为参考，则为 $15.7407\ \kcalmol$。两者的差值正是端点优化的能量降低。IRC 非 TS 点的校正能量输出精度为 $10^{-6}E_{\rm h}$，对应舍入半宽约 $0.00031\ \kcalmol$。
+
+Gaussian 复合物相对两个分离反应物的结合电子能为 $-2.7918\ \kcalmol$，因此分离反应物参照的电子势垒为 $12.9489\ \kcalmol$；加入热校正及对称数修正后，双分子活化自由能为 $26.4693\ \kcalmol$。ORCA 对照采用电子势垒，双分子活化自由能采用 Gaussian 的完整反应物热化学数据。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/neb-cineb-irc-comparison.png}
+\caption{普通 NEB、CI-NEB 与 Gaussian IRC 的电子势能对照。零点分别取各程序的弱结合复合物，横轴为两条成键距离的平均值。折线连接实际路径点，叉号表示进一步优化后的 Gaussian 端点；右上图放大反应物侧。}
+\label{fig:path-comparison}
+\end{figure}
+
+\subsection{CI-NEB 峰顶的独立频率复核}
+最终 CI-NEB 整带最大有效力为 $0.018596\ \mathrm{eV\,\AA^{-1}}$，达到采用的 $0.02\ \mathrm{eV\,\AA^{-1}}$ 标准。内部峰顶的真实最大原子力为 $3.13\times10^{-5}\ \mathrm{eV\,\AA^{-1}}$，已接近驻点。
+
+独立数值频率包含 6 个平移、转动投影模式和 42 个振动模式，其中恰有一个 $516.09i\ \mathrm{cm^{-1}}$ 虚频。该模式使两条新键同时缩短，并伴随原双键伸长及 C2--C3 缩短（图~\ref{fig:cineb}）。保持共同碳编号、匹配等价氢并作正旋转配准后，新旧结构的全原子 RMSD 为 $9.12\times10^{-5}\ \mathrm{\AA}$，虚频位移的归一化内积绝对值为 $0.999982$。CI-NEB 与原 Gaussian TS 的几何和成键模式高度一致。
+
+\begin{table}[htbp]
+\centering\small
+\caption{原 Gaussian TS 与 ORCA CI-NEB 峰顶的对照。频率均未缩放。}
+\label{tab:cineb}
+\begin{tabular}{lrr}
+\toprule
+量 & Gaussian TS & ORCA CI-NEB 峰顶\\
+\midrule
+C1--C5 / $\mathrm{\AA}$ & 2.271199 & 2.271171\\
+C4--C6 / $\mathrm{\AA}$ & 2.271181 & 2.271219\\
+唯一虚频 / $\mathrm{cm^{-1}}$ & $517.19i$ & $516.09i$\\
+$E_{\rm el}$ / $E_{\rm h}$ & $-234.401776418$ & $-234.401780454$\\
+$G$ / $E_{\rm h}$ & $-234.291876$ & $-234.29188468$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+表~\ref{tab:cineb} 的 $G$ 为 $298.15\ \mathrm{K}$、$1\ \mathrm{atm}$ 下的 RRHO 值，峰顶转动对称数为 1。ORCA 采用 C/H 原子量 $12.011/1.008$，Gaussian 采用 $12.000/1.00782504$；两程序的频率微差包含原子质量约定和数值积分设置的影响\cite{orca-freq}。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/cineb-ci400-review.png}
+\caption{距离引导的 CI-NEB 电子势能与峰顶唯一虚频模式。左图零点为同带弱结合复合物，横轴为累计笛卡尔路径长度；右图箭头对应两条新键协同形成的模式位移。}
+\label{fig:cineb}
+\end{figure}
+
+\subsection{电子能与 Gibbs 自由能}
+Gaussian 各驻点的电子能和自由能列于表~\ref{tab:absolute}。原始自由能 $G_{\rm out}$ 与式~\eqref{eq:sigma} 的对称数修正结果分别列出。
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{各驻点的绝对能量（Hartree）。$G$ 为转动对称数修正后的值。}
+\label{tab:absolute}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+体系 & $E_{\rm el}$ & $G_{\rm out}$ & $G$\\
+\midrule
+乙烯 & $-78.535524801$ & $-78.505711$ & $-78.505711$\\
+丁二烯 & $-155.886887052$ & $-155.829001$ & $-155.828347$\\
+反应物复合物 & $-234.426860887$ & $-234.327318$ & $-234.327318$\\
+环加成 TS & $-234.401776418$ & $-234.291876$ & $-234.291876$\\
+环己烯 B & $-234.495414337$ & $-234.379714$ & $-234.379714$\\
+环己烯 A & $-234.504280669$ & $-234.387199$ & $-234.386545$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{相对于两个分离反应物的能量差（$\kcalmol$）。每列采用相应的反应物能量之和为零点。}
+\label{tab:relative}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+体系 & $\Delta E_{\rm el}$ & $\Delta(E+\mathrm{ZPE})$ & $\Delta H$ & $\Delta G_{\rm out}$ & $\Delta G$\\
+\midrule
+反应物复合物 & $-2.79$ & $-2.09$ & $-1.50$ & $4.64$ & $4.23$\\
+环加成 TS & $12.95$ & $15.51$ & $14.07$ & $26.88$ & $26.47$\\
+环己烯 B & $-45.81$ & $-39.48$ & $-41.30$ & $-28.24$ & $-28.65$\\
+环己烯 A & $-51.37$ & $-44.89$ & $-46.91$ & $-32.94$ & $-32.94$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+环加成的电子能垒为 $12.95\ \kcalmol$，加入零点校正后为 $15.51\ \kcalmol$，活化自由能为 $26.47\ \kcalmol$。由 $\Delta G^{\ddagger}=\Delta H^{\ddagger}-T\Delta S^{\ddagger}$ 得 $\Delta S^{\ddagger}\approx-41.60\ \mathrm{cal\,mol^{-1}\,K^{-1}}$；两个分离分子形成一个受限的活化复合体，熵降低使自由能垒显著高于焓垒。
+
+生成 IRC 直接连接的 B 时，反应自由能为 $-28.65\ \kcalmol$；独立优化构象 A 的相对自由能为 $-32.94\ \kcalmol$。反应物复合物的电子能比两个分离反应物低 $2.79\ \kcalmol$，但其自由能高 $4.23\ \kcalmol$，说明电子结合与标准态下缔合的自由能变化并不等同。图~\ref{fig:gibbs} 保持分离反应物为零点。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/gibbs-free-energy-profile.png}
+\caption{$298.15\ \mathrm{K}$、$1\ \mathrm{atm}$ 下各驻点的 RRHO Gibbs 自由能。A 单列用于比较构象稳定性。}
+\label{fig:gibbs}
+\end{figure}
+
+热化学比较采用同一 RRHO 处理。B 的 $45.46\ \mathrm{cm^{-1}}$ 模式主要是环扭转，复合物低于 $100\ \mathrm{cm^{-1}}$ 的五个模式主要是碎片间平移与转动。这些软模式的谐振子熵对低频处理较敏感，因此小幅自由能差也更依赖这一处理。
+
+\subsection{前线轨道与成键相位}
+由独立优化反应物的波函数绘制丁二烯 HOMO（MO 15）和乙烯 LUMO（MO 9），等值面统一取 $\pm0.030\ \mathrm{bohr^{-3/2}}$（图~\ref{fig:orbitals}）。颜色表示波函数正负号，不表示正负电荷；单个轨道的整体符号可任意反转，具有物理意义的是不同位置之间的相对相位。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/frontier-orbital-surfaces.png}
+\caption{丁二烯 HOMO 与乙烯 LUMO 的真实波函数等值面。两者来自各自优化结构，使用相同空间尺度及等值面阈值。}
+\label{fig:orbitals}
+\end{figure}
+
+将孤立反应物的片段轨道按照 TS 中的相对朝向刚性排列后，两条接近方向 C1--C5 与 C4--C6 上均可实现同相重叠（图~\ref{fig:phase}）。这一相位关系使两个端点同时产生有利的成键相互作用，与频率及 IRC 所揭示的协同成键相一致。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.84\linewidth]{figures/frontier-phase-matching.png}
+\caption{沿两条成键接近方向比较轨道相位。仅平移、旋转各片段，保持其优化几何与波函数；乙烯轨道整体换号以便比较。}
+\label{fig:phase}
+\end{figure}
+
+丁二烯 HOMO 能量为 $-6.518\ \mathrm{eV}$，乙烯 LUMO 为 $+0.148\ \mathrm{eV}$，两者相差 $6.666\ \mathrm{eV}$。反向的乙烯 HOMO--丁二烯 LUMO 能隙约为 $6.517\ \mathrm{eV}$，两组能隙接近，说明两个方向的供受体相互作用均值得考虑。轨道能级见图~\ref{fig:levels}。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/frontier-orbital-levels.png}
+\caption{孤立反应物的前线轨道能级。实线为占据轨道，虚线为未占据轨道。}
+\label{fig:levels}
+\end{figure}
+
+\subsection{环己烯构象比较}
+构象 A 与 B 均为无虚频的局部极小值。B 的电子能比 A 高 $5.564\ \kcalmol$，对称数修正后的自由能高 $4.286\ \kcalmol$。它们具有相同共价连接关系，主要差异为六元环的空间扭曲。
+
+以两种构象进行 QST2 搜索，得到一个环扭转一阶鞍点，其 42 个振动模式中有唯一的 $66.24i\ \mathrm{cm^{-1}}$ 虚频，位移主要改变环二面角。该鞍点相对于 A、B 的能量高度列于表~\ref{tab:conformer}。
+
+\begin{table}[htbp]
+\centering\small
+\caption{Gaussian 环扭转鞍点相对构象 A、B 的能量高度（$\kcalmol$）。}
+\label{tab:conformer}
+\begin{tabular}{lrrrr}
+\toprule
+参考构象 & $\Delta E_{\rm el}$ & $\Delta(E+\mathrm{ZPE})$ & $\Delta G_{\rm out}$ & $\Delta G$\\
+\midrule
+A & $5.5919$ & $5.3432$ & $5.5855$ & $5.1748$\\
+B & $0.0282$ & $-0.0646$ & $0.8886$ & $0.8886$\\
+\bottomrule
+\end{tabular}
+\end{table}
+B 一侧的电子能高度仅 $0.0282\ \kcalmol$，零点校正后鞍点能级略低于 B，显示该区域势能面非常平缓。这一级别的能量差对低频振动和零点校正尤为敏感。
+
+端点独立构建的 ORCA 路径中，普通 NEB 在第 35 步达到整带最大有效力 $0.04928\ \mathrm{eV\,\AA^{-1}}$，CI-NEB 在第 50 步达到 $0.00676\ \mathrm{eV\,\AA^{-1}}$。以同一组 ORCA 优化端点的电子能为参考，普通 NEB、CI-NEB 及精修鞍点相对 A 的高度依次为 $5.8265$、$5.5911$、$5.5907\ \kcalmol$，相对 B 则为 $0.2629$、$0.0275$、$0.0272\ \kcalmol$。CI-NEB 显著降低了普通 NEB 峰顶的残余能量，随后 OptTS 精修仅带来很小的变化。
+
+精修结构具有唯一的 $67.56i\ \mathrm{cm^{-1}}$ 环扭转虚频，真实最大残余力为 $9.98\times10^{-5}\ \mathrm{eV\,\AA^{-1}}$。保持碳编号、匹配等价氢并作正旋转配准后，与 Gaussian 构象鞍点的全原子 RMSD 为 $0.00209\ \mathrm{\AA}$，虚频模式重合度为 $0.99998$。两种搜索得到了高度一致的环扭转鞍点，均显示 B 一侧势垒很浅。A/B 路径由收敛的 CI-NEB 支持；构象双向 IRC 未完成。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/electronic-energy-ladder-complete.png}
+\caption{完整电子能阶梯及构象鞍点对照。上图采用 Gaussian 数据，以分离反应物为零点；实线连接 IRC 确认的 RC--TS--B。下图各程序以自身优化端点为参考，ORCA 各行统一采用端点频率计算的电子能；右下放大 B 侧能级。全部能级均为未加零点能和热校正的电子能，横向间隔为示意。}
+\label{fig:energy-ladder-complete}
+\end{figure}
+
+\section{思考与讨论}
+\subsection{为什么一阶过渡态恰有一个虚频？}
+在驻点附近作二阶展开：
+\begin{equation}
+E\simeq E_0+\frac12\sum_i\lambda_i Q_i^2.
+\end{equation}
+一阶鞍点沿一个方向为极大值、沿其余振动方向为极小值，因此恰有一个 $\lambda_i<0$，对应虚频。没有虚频通常对应极小值；多个虚频对应更高阶鞍点。数值上还须排除未收敛几何引起的伪虚频。本次 $517.19i\ \mathrm{cm^{-1}}$ 模式对应两条 C--C 键的协同变化，且 IRC 确认其连接关系，因而能够将该鞍点归属为所研究环加成通道的过渡态\cite{transition-state}。
+
+\subsection{过渡态理论的基本假设是什么？}
+常规过渡态理论将反应速率视为体系穿过反应物与产物之间分界面的通量。其主要假设为：反应物区能够建立热平衡；反应物与除去反应坐标自由度的活化复合体保持准平衡；沿反应坐标的运动可与其余自由度近似分离；向产物方向穿过分界面的轨迹不再返回\cite{tst}。
+
+对于单分子步骤，Eyring 形式为
+\begin{equation}
+k_1=\kappa\frac{k_{\rm B}T}{h}
+\exp\!\left(-\frac{\Delta G^{\ddagger,\circ}}{RT}\right).
+\end{equation}
+本实验是双分子反应，若以浓度定义二级速率常数，则需匹配标准态：
+\begin{equation}
+k_2=\kappa\frac{k_{\rm B}T}{h}\frac{1}{c^\circ}
+\exp\!\left(-\frac{\Delta G^{\ddagger,\circ}}{RT}\right),
+\qquad c^\circ=\frac{p^\circ}{RT}.
+\end{equation}
+本报告 $p^\circ=1\ \mathrm{atm}$。常规无再穿越近似取 $\kappa=1$；反应坐标对应的虚频不作为稳定谐振动计入配分函数。
+
+\subsection{过渡态理论有哪些不适用或需要修正的情形？}
+显著的分界面再穿越会使无再穿越近似高估反应通量；轻原子转移及低温反应中的隧穿使经典越垒描述不足；未达到热平衡的短寿命中间体或强非统计动力学不满足准平衡假设。涉及电子态切换的反应还需要非绝热动力学；无明显势能鞍点的缔合、扩散控制反应也不能仅用某个鞍点的谐振子自由能描述。因而，IRC 确定的是势能面上的连接通道，不等同于真实时间轨迹或完整速率模型。
+
+\section{结论}
+在 B3LYP-D3(BJ)/def2-SVP 水平上，1,3-丁二烯与乙烯环加成过渡态具有唯一的 $517.19i\ \mathrm{cm^{-1}}$ 虚频，两条形成键约为 $2.2712\ \mathrm{\AA}$。双向 IRC 与端点频率计算确认该通道连接丁二烯--乙烯弱结合复合物和环己烯 B，沿路径呈现近同步的双端成键。丁二烯 HOMO 与乙烯 LUMO 在两端可同时满足同相重叠，为协同成键提供轨道解释。
+
+以各自程序的弱结合复合物为参照，普通 NEB、CI-NEB 与原 Gaussian TS 的电子势垒分别为 $15.7360$、$15.7381$、$15.7407\ \kcalmol$。CI-NEB 峰顶具有唯一的 $516.09i\ \mathrm{cm^{-1}}$ 成键虚频，其几何与模式均与原 TS 高度一致。NEB/CI-NEB 与 IRC 在势垒顶和整体成键趋势上相符，主要差别位于反应物侧的路径形状及有限 IRC 末点。
+
+以所优化的近 s-cis 扭曲丁二烯与乙烯为参考，$298.15\ \mathrm{K}$、$1\ \mathrm{atm}$ 下经转动对称数修正的 RRHO 活化自由能为 $26.47\ \kcalmol$，生成 B 的反应自由能为 $-28.65\ \kcalmol$。构象 A 更稳定，其相对自由能为 $-32.94\ \kcalmol$。构象 CI-NEB 和鞍点精修给出相对 A、B 的电子能高度分别为 $5.5907$、$0.0272\ \kcalmol$，说明 B 位于环扭转势能面上很浅的局部势阱中。
+
+\begin{thebibliography}{9}
+\bibitem{course} 刘迎春. 环加成反应的机理研究：量子化学实验课件. 浙江大学化学系，2026年10月，pp. 2--5, 8--26.
+\bibitem{thermo} Ochterski, J. W. \textit{Thermochemistry in Gaussian}. Gaussian, Inc., 2000; updated 2022. \url{https://gaussian.com/wp-content/uploads/dl/thermo.pdf}.
+\bibitem{transition-state} IUPAC. Transition state. \textit{Compendium of Chemical Terminology (the Gold Book)}. \url{https://doi.org/10.1351/goldbook.T06468}.
+\bibitem{tst} IUPAC. Transition state theory. \textit{Compendium of Chemical Terminology (the Gold Book)}. \url{https://doi.org/10.1351/goldbook.T06470}.
+\bibitem{orca-dft} FACCTs. \textit{ORCA 6.1 Manual}, Density Functional Theory. \url{https://www.faccts.de/docs/orca/6.1/manual/contents/modelchemistries/DensityFunctionalTheory.html}.
+\bibitem{orca-freq} FACCTs. \textit{ORCA 6.1 Manual}, Vibrational Frequencies. \url{https://www.faccts.de/docs/orca/6.1/manual/contents/structurereactivity/frequencies.html}.
+\bibitem{ase-neb} ASE developers. \textit{Nudged elastic band}, Climbing image and analysis of output. \url{https://docs.ase-lib.org/ase/neb.html}.
+\bibitem{orca-irc} FACCTs. \textit{ORCA 6.1 Manual}, Intrinsic Reaction Coordinate. \url{https://www.faccts.de/docs/orca/6.1/manual/contents/structurereactivity/irc.html}.
+\end{thebibliography}
+\vspace{0.5em}
+{\small\noindent Data, figures and reproducibility:\par
+\noindent\url{https://github.com/populuscathayana/Quantum3}\par}
+\end{document}

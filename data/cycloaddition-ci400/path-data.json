@@ -1,0 +1,177 @@
+{
+  "source_CI_step": 400,
+  "description": "Discrete CI-NEB electronic energy, not IRC or Gibbs energy",
+  "energy_reference": "Same-band ORCA weak reactant complex image 0",
+  "rows": [
+    {
+      "image": 0,
+      "cartesian_path_length_A": 0.0,
+      "energy_hartree": -234.426860773927,
+      "relative_energy_kcal_mol": 0.0,
+      "forming_distances_A": [
+        3.626479202347987,
+        3.6569476342485827
+      ]
+    },
+    {
+      "image": 1,
+      "cartesian_path_length_A": 2.547776635497898,
+      "energy_hartree": -234.426009068646,
+      "relative_energy_kcal_mol": 0.534453132924105,
+      "forming_distances_A": [
+        3.758869996087432,
+        3.756664427860663
+      ]
+    },
+    {
+      "image": 2,
+      "cartesian_path_length_A": 4.290648888006492,
+      "energy_hartree": -234.425969004154,
+      "relative_energy_kcal_mol": 0.5595939812262386,
+      "forming_distances_A": [
+        3.3429142676469064,
+        3.342773876034967
+      ]
+    },
+    {
+      "image": 3,
+      "cartesian_path_length_A": 5.178483922526652,
+      "energy_hartree": -234.423433363285,
+      "relative_energy_kcal_mol": 2.1507326493534396,
+      "forming_distances_A": [
+        2.981852564076271,
+        2.981845006494251
+      ]
+    },
+    {
+      "image": 4,
+      "cartesian_path_length_A": 5.667296797933874,
+      "energy_hartree": -234.417248217854,
+      "relative_energy_kcal_mol": 6.031970005766833,
+      "forming_distances_A": [
+        2.738653317862262,
+        2.738664466549751
+      ]
+    },
+    {
+      "image": 5,
+      "cartesian_path_length_A": 5.951583366941667,
+      "energy_hartree": -234.409731137006,
+      "relative_energy_kcal_mol": 10.749009455187526,
+      "forming_distances_A": [
+        2.535863442625109,
+        2.5358647220914654
+      ]
+    },
+    {
+      "image": 6,
+      "cartesian_path_length_A": 6.11073383018476,
+      "energy_hartree": -234.404065100235,
+      "relative_energy_kcal_mol": 14.304501209382272,
+      "forming_distances_A": [
+        2.3900608369906102,
+        2.3900766803457905
+      ]
+    },
+    {
+      "image": 7,
+      "cartesian_path_length_A": 6.186451262059219,
+      "energy_hartree": -234.402193684036,
+      "relative_energy_kcal_mol": 15.478832604157734,
+      "forming_distances_A": [
+        2.3179951369681153,
+        2.318033399957256
+      ]
+    },
+    {
+      "image": 8,
+      "cartesian_path_length_A": 6.235316854903715,
+      "energy_hartree": -234.40178045394,
+      "relative_energy_kcal_mol": 15.738138404366314,
+      "forming_distances_A": [
+        2.2711708505905417,
+        2.271219222141752
+      ]
+    },
+    {
+      "image": 9,
+      "cartesian_path_length_A": 6.289650685798878,
+      "energy_hartree": -234.402387904043,
+      "relative_energy_kcal_mol": 15.356957709719474,
+      "forming_distances_A": [
+        2.2189508920173466,
+        2.218996415289717
+      ]
+    },
+    {
+      "image": 10,
+      "cartesian_path_length_A": 6.385129517949607,
+      "energy_hartree": -234.406863415436,
+      "relative_energy_kcal_mol": 12.54853190933675,
+      "forming_distances_A": [
+        2.1271514865915955,
+        2.1271818236546025
+      ]
+    },
+    {
+      "image": 11,
+      "cartesian_path_length_A": 6.572472089403868,
+      "energy_hartree": -234.428247899195,
+      "relative_energy_kcal_mol": -0.870434247379948,
+      "forming_distances_A": [
+        1.9472548957905271,
+        1.947294318553471
+      ]
+    },
+    {
+      "image": 12,
+      "cartesian_path_length_A": 6.792808324549835,
+      "energy_hartree": -234.46497985358,
+      "relative_energy_kcal_mol": -23.920083624823857,
+      "forming_distances_A": [
+        1.7424208000149748,
+        1.7424369860712938
+      ]
+    },
+    {
+      "image": 13,
+      "cartesian_path_length_A": 7.136116794660521,
+      "energy_hartree": -234.491996431971,
+      "relative_energy_kcal_mol": -40.87324252194403,
+      "forming_distances_A": [
+        1.5641172431774237,
+        1.5641122824896885
+      ]
+    },
+    {
+      "image": 14,
+      "cartesian_path_length_A": 7.469589983974212,
+      "energy_hartree": -234.494969596217,
+      "relative_energy_kcal_mol": -42.73893125426405,
+      "forming_distances_A": [
+        1.5467831977014221,
+        1.546790050336274
+      ]
+    },
+    {
+      "image": 15,
+      "cartesian_path_length_A": 7.65963078678716,
+      "energy_hartree": -234.49537101069,
+      "relative_energy_kcal_mol": -42.99082263909984,
+      "forming_distances_A": [
+        1.54572621065608,
+        1.545728520646883
+      ]
+    },
+    {
+      "image": 16,
+      "cartesian_path_length_A": 7.754637914826278,
+      "energy_hartree": -234.495413862243,
+      "relative_energy_kcal_mol": -43.01771239457966,
+      "forming_distances_A": [
+        1.5454942415021475,
+        1.5454939840107662
+      ]
+    }
+  ]
+}

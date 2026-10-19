@@ -1,0 +1,9 @@
+%NProcShared=4
+%Mem=8GB
+%OldChk=source-ts.chk
+%Chk=calc.chk
+#p B3LYP/Def2SVP EmpiricalDispersion=GD3BJ SCF=(Tight,XQC) Int=UltraFine NoSymm Geom=AllCheck Guess=Read IRC=(RCFC,HPC,Forward,MaxPoints=80,StepSize=10,MaxCycle=100,ReCalc=5,Tight,Phase=(1,5),Report=Read)
+
+1 5
+4 6
+

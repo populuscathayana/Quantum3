@@ -1,0 +1,717 @@
+{
+  "status": "rotational_symmetry_and_RRHO_arithmetic_verified",
+  "temperature_K": 298.15,
+  "pressure_atm": 1,
+  "convention": "One optimized conformer of each species; no conformational/enantiomer population factor. External rotational symmetry only.",
+  "formula": "G_corrected = G_printed + RT ln(sigma_verified / sigma_printed)",
+  "formula_derivation": "q_rot proportional to 1/sigma; S_rot changes by -R ln(sigma_verified/sigma_printed); H unchanged.",
+  "verified_sigma_sequence": {
+    "ethylene-opt": 4,
+    "butadiene-opt": 2,
+    "cyclohexene-opt": 2,
+    "ts-opt": 1,
+    "product-endpoint-opt": 1,
+    "reactant-endpoint-opt": 1,
+    "cyclohexene-conf-ts": 1
+  },
+  "method_references": [
+    "https://orca-manual.mpi-muelheim.mpg.de/contents/structurereactivity/thermochemistry.html",
+    "https://www.nist.gov/mml/csd/chemical-informatics-group/products-and-services/program-computing-ideal-gas-thermodynamic"
+  ],
+  "jobs": {
+    "ethylene-opt": {
+      "job_id": "3009",
+      "source_directory": "sources/gaussian/ethylene-opt",
+      "fchk_sha256": "761069e53aef5308a266d5eedf6bfffe48b1599855ee61d0dd6c8fcc967bddc9",
+      "temperature_K": 298.15,
+      "pressure_atm": 1.0,
+      "raw_Gaussian_hartree": {
+        "E": -78.53552480079568,
+        "ZPE": 0.050703,
+        "G_correction": 0.029814,
+        "E_ZPE": -78.484822,
+        "H": -78.480828,
+        "G": -78.505711
+      },
+      "rotational_symmetry": {
+        "sigma": 4,
+        "atom_graph_automorphisms": 8,
+        "maximum_atom_displacement_tolerance_A": 0.001,
+        "tolerance_sweep_sigma": {
+          "0.0001": 4,
+          "0.0003": 4,
+          "0.001": 4,
+          "0.003": 4
+        },
+        "proper_rotations": [
+          {
+            "permutation_1based": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "proper_max_error_A": 1.6829029952069695e-21,
+            "proper_rms_error_A": 1.3740843767293585e-21,
+            "rotation_deg": 0.0,
+            "improper_max_error_A": 8.996069437757332e-12,
+            "improper_rms_error_A": 5.317404398072672e-12
+          },
+          {
+            "permutation_1based": [
+              1,
+              2,
+              4,
+              3,
+              6,
+              5
+            ],
+            "proper_max_error_A": 5.690194622373927e-12,
+            "proper_rms_error_A": 4.630865241056597e-12,
+            "rotation_deg": 179.99999879258172,
+            "improper_max_error_A": 3.591727619762556e-12,
+            "improper_rms_error_A": 2.9536350174811733e-12
+          },
+          {
+            "permutation_1based": [
+              2,
+              1,
+              5,
+              6,
+              3,
+              4
+            ],
+            "proper_max_error_A": 5.5059794381148585e-12,
+            "proper_rms_error_A": 4.563187406302975e-12,
+            "rotation_deg": 180.0,
+            "improper_max_error_A": 3.500682830607386e-12,
+            "improper_rms_error_A": 2.8578707969944593e-12
+          },
+          {
+            "permutation_1based": [
+              2,
+              1,
+              6,
+              5,
+              4,
+              3
+            ],
+            "proper_max_error_A": 9.371227985046109e-13,
+            "proper_rms_error_A": 7.888238241882907e-13,
+            "rotation_deg": 180.0,
+            "improper_max_error_A": 8.96608534020877e-12,
+            "improper_rms_error_A": 5.369481660890814e-12
+          }
+        ],
+        "nearest_rejected_proper_rotation_max_error_A": 1.862127402561124,
+        "improper_operation_count": 4,
+        "policy": "Only proper rotations count toward sigma. Small coordinate asymmetries are treated as optimization noise; no coordinates changed."
+      },
+      "printed_sigma": 4,
+      "symmetry_G_correction_kcal_mol": 0.0,
+      "symmetry_corrected_G_hartree": -78.505711,
+      "entropy_reconstruction": {
+        "rotational_J_mol_K": 66.47640187164885,
+        "translational_J_mol_K": 150.31803344959837,
+        "vibrational_J_mol_K": 2.3235284713391535,
+        "total_J_mol_K": 219.11796379258638,
+        "printed_total_J_mol_K": 219.11608,
+        "G_reconstruction_error_kcal_mol": 6.850488110473162e-05,
+        "rotational_constants_geometry_vs_output_max_relative_error": 1.4479586824544433e-07
+      },
+      "imaginary_frequencies_cm_1": [],
+      "real_modes_below_100_cm_1": [],
+      "low_mode_entropy_fraction": 0.0,
+      "RRHO_notes": "Unscaled harmonic frequencies. Imaginary mode excluded from vibrational partition function. No low-frequency cutoff, quasi-RRHO, hindered-rotor or conformer-population correction applied."
+    },
+    "butadiene-opt": {
+      "job_id": "3010",
+      "source_directory": "sources/gaussian/butadiene-opt",
+      "fchk_sha256": "6795eb799d816100362aa88558f67926ce3c588b601cef4381f593aa42dc58ea",
+      "temperature_K": 298.15,
+      "pressure_atm": 1.0,
+      "raw_Gaussian_hartree": {
+        "E": -155.8868870520367,
+        "ZPE": 0.084665,
+        "G_correction": 0.057886,
+        "E_ZPE": -155.802222,
+        "H": -155.796542,
+        "G": -155.829001
+      },
+      "rotational_symmetry": {
+        "sigma": 2,
+        "atom_graph_automorphisms": 8,
+        "maximum_atom_displacement_tolerance_A": 0.001,
+        "tolerance_sweep_sigma": {
+          "0.0001": 2,
+          "0.0003": 2,
+          "0.001": 2,
+          "0.003": 2
+        },
+        "proper_rotations": [
+          {
+            "permutation_1based": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "proper_max_error_A": 1.1778964011900897e-15,
+            "proper_rms_error_A": 6.033407153413662e-16,
+            "rotation_deg": 0.0,
+            "improper_max_error_A": 0.8017133911421285,
+            "improper_rms_error_A": 0.4824379031565653
+          },
+          {
+            "permutation_1based": [
+              4,
+              3,
+              2,
+              1,
+              9,
+              10,
+              8,
+              7,
+              5,
+              6
+            ],
+            "proper_max_error_A": 1.543078924354914e-05,
+            "proper_rms_error_A": 1.0041543446779506e-05,
+            "rotation_deg": 179.99999829245272,
+            "improper_max_error_A": 0.8016995231385945,
+            "improper_rms_error_A": 0.4824379031011837
+          }
+        ],
+        "nearest_rejected_proper_rotation_max_error_A": 1.865277228991767,
+        "improper_operation_count": 0,
+        "policy": "Only proper rotations count toward sigma. Small coordinate asymmetries are treated as optimization noise; no coordinates changed."
+      },
+      "printed_sigma": 1,
+      "symmetry_G_correction_kcal_mol": 0.4106792724182964,
+      "symmetry_corrected_G_hartree": -155.82834654092107,
+      "entropy_reconstruction": {
+        "rotational_J_mol_K": 100.00876137382949,
+        "translational_J_mol_K": 158.50609173754762,
+        "vibrational_J_mol_K": 27.3221493316222,
+        "total_J_mol_K": 285.8370024429993,
+        "printed_total_J_mol_K": 285.838328,
+        "G_reconstruction_error_kcal_mol": -0.0002890727617648905,
+        "rotational_constants_geometry_vs_output_max_relative_error": 5.991035808241193e-07
+      },
+      "imaginary_frequencies_cm_1": [],
+      "real_modes_below_100_cm_1": [],
+      "low_mode_entropy_fraction": 0.0,
+      "RRHO_notes": "Unscaled harmonic frequencies. Imaginary mode excluded from vibrational partition function. No low-frequency cutoff, quasi-RRHO, hindered-rotor or conformer-population correction applied."
+    },
+    "cyclohexene-opt": {
+      "job_id": "3011",
+      "source_directory": "sources/gaussian/cyclohexene-opt",
+      "fchk_sha256": "0b9870ab24614bbe1f80f29e1bfffce039ada3accb51795bd2eab893405ea5d7",
+      "temperature_K": 298.15,
+      "pressure_atm": 1.0,
+      "raw_Gaussian_hartree": {
+        "E": -234.5042806688269,
+        "ZPE": 0.145701,
+        "G_correction": 0.117081,
+        "E_ZPE": -234.358579,
+        "H": -234.352131,
+        "G": -234.387199
+      },
+      "rotational_symmetry": {
+        "sigma": 2,
+        "atom_graph_automorphisms": 32,
+        "maximum_atom_displacement_tolerance_A": 0.001,
+        "tolerance_sweep_sigma": {
+          "0.0001": 2,
+          "0.0003": 2,
+          "0.001": 2,
+          "0.003": 2
+        },
+        "proper_rotations": [
+          {
+            "permutation_1based": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "proper_max_error_A": 9.164595183352473e-16,
+            "proper_rms_error_A": 5.234066361754215e-16,
+            "rotation_deg": 1.7075472925031877e-06,
+            "improper_max_error_A": 2.8461197593648837,
+            "improper_rms_error_A": 1.3627442475098834
+          },
+          {
+            "permutation_1based": [
+              4,
+              3,
+              2,
+              1,
+              6,
+              5,
+              11,
+              12,
+              10,
+              9,
+              7,
+              8,
+              16,
+              15,
+              14,
+              13
+            ],
+            "proper_max_error_A": 7.858266868966846e-05,
+            "proper_rms_error_A": 5.568024959927865e-05,
+            "rotation_deg": 179.99999879258172,
+            "improper_max_error_A": 2.846097652814252,
+            "improper_rms_error_A": 1.3627442472389573
+          }
+        ],
+        "nearest_rejected_proper_rotation_max_error_A": 1.7567070286230895,
+        "improper_operation_count": 0,
+        "policy": "Only proper rotations count toward sigma. Small coordinate asymmetries are treated as optimization noise; no coordinates changed."
+      },
+      "printed_sigma": 1,
+      "symmetry_G_correction_kcal_mol": 0.4106792724182964,
+      "symmetry_corrected_G_hartree": -234.38654454092108,
+      "entropy_reconstruction": {
+        "rotational_J_mol_K": 109.54240700259109,
+        "translational_J_mol_K": 163.71701424200788,
+        "vibrational_J_mol_K": 35.55266427419187,
+        "total_J_mol_K": 308.8120855187908,
+        "printed_total_J_mol_K": 308.812672,
+        "G_reconstruction_error_kcal_mol": -0.0003111711737934528,
+        "rotational_constants_geometry_vs_output_max_relative_error": 1.7997184653621331e-06
+      },
+      "imaginary_frequencies_cm_1": [],
+      "real_modes_below_100_cm_1": [],
+      "low_mode_entropy_fraction": 0.0,
+      "RRHO_notes": "Unscaled harmonic frequencies. Imaginary mode excluded from vibrational partition function. No low-frequency cutoff, quasi-RRHO, hindered-rotor or conformer-population correction applied."
+    },
+    "ts-opt": {
+      "job_id": "3025",
+      "source_directory": "sources/gaussian/ts-opt",
+      "fchk_sha256": "d23eb4276e141814e73c8fd81f3cc23b9c84c7f60c58db7c47d0c5fc55a475cd",
+      "temperature_K": 298.15,
+      "pressure_atm": 1.0,
+      "raw_Gaussian_hartree": {
+        "E": -234.4017764178209,
+        "ZPE": 0.139446,
+        "G_correction": 0.109901,
+        "E_ZPE": -234.262331,
+        "H": -234.254953,
+        "G": -234.291876
+      },
+      "rotational_symmetry": {
+        "sigma": 1,
+        "atom_graph_automorphisms": 64,
+        "maximum_atom_displacement_tolerance_A": 0.001,
+        "tolerance_sweep_sigma": {
+          "0.0001": 1,
+          "0.0003": 1,
+          "0.001": 1,
+          "0.003": 1
+        },
+        "proper_rotations": [
+          {
+            "permutation_1based": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "proper_max_error_A": 1.1322097734007351e-15,
+            "proper_rms_error_A": 7.217783939387125e-16,
+            "rotation_deg": 0.0,
+            "improper_max_error_A": 2.9416513638478445,
+            "improper_rms_error_A": 1.6518232941083368
+          }
+        ],
+        "nearest_rejected_proper_rotation_max_error_A": 1.840632026557168,
+        "improper_operation_count": 1,
+        "policy": "Only proper rotations count toward sigma. Small coordinate asymmetries are treated as optimization noise; no coordinates changed."
+      },
+      "printed_sigma": 1,
+      "symmetry_G_correction_kcal_mol": 0.0,
+      "symmetry_corrected_G_hartree": -234.291876,
+      "entropy_reconstruction": {
+        "rotational_J_mol_K": 111.49909190351582,
+        "translational_J_mol_K": 163.71701424200788,
+        "vibrational_J_mol_K": 49.92188984831958,
+        "total_J_mol_K": 325.1379959938432,
+        "printed_total_J_mol_K": 325.13864,
+        "G_reconstruction_error_kcal_mol": 0.00034170242210663593,
+        "rotational_constants_geometry_vs_output_max_relative_error": 7.937941359685479e-07
+      },
+      "imaginary_frequencies_cm_1": [
+        -517.1909
+      ],
+      "real_modes_below_100_cm_1": [],
+      "low_mode_entropy_fraction": 0.0,
+      "RRHO_notes": "Unscaled harmonic frequencies. Imaginary mode excluded from vibrational partition function. No low-frequency cutoff, quasi-RRHO, hindered-rotor or conformer-population correction applied."
+    },
+    "product-endpoint-opt": {
+      "job_id": "3303",
+      "source_directory": "sources/gaussian/product-endpoint-opt",
+      "fchk_sha256": "a8c3c91d5b1f7a3dfcb3ca5d3b81c6388b7b2fe0f3c75cd247b70f3a56ef09a3",
+      "temperature_K": 298.15,
+      "pressure_atm": 1.0,
+      "raw_Gaussian_hartree": {
+        "E": -234.4954143365076,
+        "ZPE": 0.145454,
+        "G_correction": 0.115701,
+        "E_ZPE": -234.349961,
+        "H": -234.343185,
+        "G": -234.379714
+      },
+      "rotational_symmetry": {
+        "sigma": 1,
+        "atom_graph_automorphisms": 32,
+        "maximum_atom_displacement_tolerance_A": 0.001,
+        "tolerance_sweep_sigma": {
+          "0.0001": 1,
+          "0.0003": 1,
+          "0.001": 1,
+          "0.003": 1
+        },
+        "proper_rotations": [
+          {
+            "permutation_1based": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "proper_max_error_A": 1.041481514324134e-15,
+            "proper_rms_error_A": 7.214823173511159e-16,
+            "rotation_deg": 0.0,
+            "improper_max_error_A": 2.917781135907417,
+            "improper_rms_error_A": 1.462405830259465
+          }
+        ],
+        "nearest_rejected_proper_rotation_max_error_A": 1.7618124746553816,
+        "improper_operation_count": 1,
+        "policy": "Only proper rotations count toward sigma. Small coordinate asymmetries are treated as optimization noise; no coordinates changed."
+      },
+      "printed_sigma": 1,
+      "symmetry_G_correction_kcal_mol": 0.0,
+      "symmetry_corrected_G_hartree": -234.379714,
+      "entropy_reconstruction": {
+        "rotational_J_mol_K": 109.49887357289244,
+        "translational_J_mol_K": 163.71701424200788,
+        "vibrational_J_mol_K": 48.45636733354173,
+        "total_J_mol_K": 321.67225514844205,
+        "printed_total_J_mol_K": 321.67428800000005,
+        "G_reconstruction_error_kcal_mol": 7.013815592105992e-05,
+        "rotational_constants_geometry_vs_output_max_relative_error": 8.721250688470763e-07
+      },
+      "imaginary_frequencies_cm_1": [],
+      "real_modes_below_100_cm_1": [
+        {
+          "frequency_cm_1": 45.4623,
+          "entropy_J_mol_K": 20.943490860530485,
+          "maximum_covalent_bond_length_derivative": 0.008436881376829242,
+          "ring_torsion_derivatives_deg_per_A": [
+            -5.751712630620318,
+            -1.653087202805068,
+            18.547012283454478,
+            -25.9676780655073,
+            18.541204641134357,
+            -1.6470395864635634
+          ],
+          "mode_character": "Ring torsion/puckering with little covalent bond stretching"
+        }
+      ],
+      "low_mode_entropy_fraction": 0.4322133914077645,
+      "RRHO_notes": "Unscaled harmonic frequencies. Imaginary mode excluded from vibrational partition function. No low-frequency cutoff, quasi-RRHO, hindered-rotor or conformer-population correction applied."
+    },
+    "reactant-endpoint-opt": {
+      "job_id": "3344",
+      "source_directory": "sources/gaussian/reactant-endpoint-opt",
+      "fchk_sha256": "6e002cecf1f9237b7fc7adfd2d363e30964d64e59717d63101accaee1b725db3",
+      "temperature_K": 298.15,
+      "pressure_atm": 1.0,
+      "raw_Gaussian_hartree": {
+        "E": -234.4268608872318,
+        "ZPE": 0.136494,
+        "G_correction": 0.099542,
+        "E_ZPE": -234.290367,
+        "H": -234.279761,
+        "G": -234.327318
+      },
+      "rotational_symmetry": {
+        "sigma": 1,
+        "atom_graph_automorphisms": 64,
+        "maximum_atom_displacement_tolerance_A": 0.001,
+        "tolerance_sweep_sigma": {
+          "0.0001": 1,
+          "0.0003": 1,
+          "0.001": 1,
+          "0.003": 1
+        },
+        "proper_rotations": [
+          {
+            "permutation_1based": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "proper_max_error_A": 1.5500339703835056e-14,
+            "proper_rms_error_A": 9.117899334749704e-15,
+            "rotation_deg": 2.4148365394514667e-06,
+            "improper_max_error_A": 2.7714606363697953,
+            "improper_rms_error_A": 1.5822404668583134
+          }
+        ],
+        "nearest_rejected_proper_rotation_max_error_A": 1.8647349772380364,
+        "improper_operation_count": 0,
+        "policy": "Only proper rotations count toward sigma. Small coordinate asymmetries are treated as optimization noise; no coordinates changed."
+      },
+      "printed_sigma": 1,
+      "symmetry_G_correction_kcal_mol": 0.0,
+      "symmetry_corrected_G_hartree": -234.327318,
+      "entropy_reconstruction": {
+        "rotational_J_mol_K": 116.46760936438737,
+        "translational_J_mol_K": 163.71701424200788,
+        "vibrational_J_mol_K": 138.60168969970366,
+        "total_J_mol_K": 418.7863133060989,
+        "printed_total_J_mol_K": 418.78492800000004,
+        "G_reconstruction_error_kcal_mol": -6.045828615733666e-05,
+        "rotational_constants_geometry_vs_output_max_relative_error": 2.6171760099125033e-06
+      },
+      "imaginary_frequencies_cm_1": [],
+      "real_modes_below_100_cm_1": [
+        {
+          "frequency_cm_1": 29.6229,
+          "entropy_J_mol_K": 24.495293709418096,
+          "maximum_covalent_bond_length_derivative": 0.00030725571124826665,
+          "mass_weighted_fragment_rigid_motion_fraction": 0.9999375324541748,
+          "mode_character": "Predominantly relative fragment translation/rotation"
+        },
+        {
+          "frequency_cm_1": 36.0352,
+          "entropy_J_mol_K": 22.869479286556384,
+          "maximum_covalent_bond_length_derivative": 0.0005576593433829526,
+          "mass_weighted_fragment_rigid_motion_fraction": 0.9806993923220629,
+          "mode_character": "Predominantly relative fragment translation/rotation"
+        },
+        {
+          "frequency_cm_1": 53.818,
+          "entropy_J_mol_K": 19.547309881014446,
+          "maximum_covalent_bond_length_derivative": 0.0008405917763412776,
+          "mass_weighted_fragment_rigid_motion_fraction": 0.979524121756994,
+          "mode_character": "Predominantly relative fragment translation/rotation"
+        },
+        {
+          "frequency_cm_1": 76.1861,
+          "entropy_J_mol_K": 16.68078496958168,
+          "maximum_covalent_bond_length_derivative": 0.0018929422609369369,
+          "mass_weighted_fragment_rigid_motion_fraction": 0.9979699242518859,
+          "mode_character": "Predominantly relative fragment translation/rotation"
+        },
+        {
+          "frequency_cm_1": 89.2571,
+          "entropy_J_mol_K": 15.381563951122676,
+          "maximum_covalent_bond_length_derivative": 0.001653469268556619,
+          "mass_weighted_fragment_rigid_motion_fraction": 0.9747223279238693,
+          "mode_character": "Predominantly relative fragment translation/rotation"
+        }
+      ],
+      "low_mode_entropy_fraction": 0.714092533879873,
+      "RRHO_notes": "Unscaled harmonic frequencies. Imaginary mode excluded from vibrational partition function. No low-frequency cutoff, quasi-RRHO, hindered-rotor or conformer-population correction applied."
+    },
+    "cyclohexene-conf-ts": {
+      "job_id": "3346",
+      "source_directory": "sources/gaussian/cyclohexene-conf-ts",
+      "fchk_sha256": "ec6c8bddf62cb0032d1f8095020fded7e4f2c9dc30fe2bbc97b5bf05915ddccb",
+      "temperature_K": 298.15,
+      "pressure_atm": 1.0,
+      "raw_Gaussian_hartree": {
+        "E": -234.4953693850758,
+        "ZPE": 0.145305,
+        "G_correction": 0.117072,
+        "E_ZPE": -234.350064,
+        "H": -234.344122,
+        "G": -234.378298
+      },
+      "rotational_symmetry": {
+        "sigma": 1,
+        "atom_graph_automorphisms": 32,
+        "maximum_atom_displacement_tolerance_A": 0.001,
+        "tolerance_sweep_sigma": {
+          "0.0001": 1,
+          "0.0003": 1,
+          "0.001": 1,
+          "0.003": 1
+        },
+        "proper_rotations": [
+          {
+            "permutation_1based": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "proper_max_error_A": 1.2161883888976235e-15,
+            "proper_rms_error_A": 8.069522665715829e-16,
+            "rotation_deg": 0.0,
+            "improper_max_error_A": 2.954913934560193,
+            "improper_rms_error_A": 1.4470475860598162
+          }
+        ],
+        "nearest_rejected_proper_rotation_max_error_A": 1.7579797687911314,
+        "improper_operation_count": 0,
+        "policy": "Only proper rotations count toward sigma. Small coordinate asymmetries are treated as optimization noise; no coordinates changed."
+      },
+      "printed_sigma": 1,
+      "symmetry_G_correction_kcal_mol": 0.0,
+      "symmetry_corrected_G_hartree": -234.378298,
+      "entropy_reconstruction": {
+        "rotational_J_mol_K": 109.53247374614443,
+        "translational_J_mol_K": 163.71701424200788,
+        "vibrational_J_mol_K": 27.69765047788143,
+        "total_J_mol_K": 300.9471384660337,
+        "printed_total_J_mol_K": 300.946752,
+        "G_reconstruction_error_kcal_mol": 0.00040304617497884327,
+        "rotational_constants_geometry_vs_output_max_relative_error": 1.8941907603013952e-06
+      },
+      "imaginary_frequencies_cm_1": [
+        -66.2381
+      ],
+      "real_modes_below_100_cm_1": [],
+      "low_mode_entropy_fraction": 0.0,
+      "RRHO_notes": "Unscaled harmonic frequencies. Imaginary mode excluded from vibrational partition function. No low-frequency cutoff, quasi-RRHO, hindered-rotor or conformer-population correction applied."
+    }
+  },
+  "relative_to_separated_reactants_kcal_mol": {
+    "cyclohexene-opt": {
+      "E": -51.373457666884384,
+      "E_ZPE": -44.88889022711105,
+      "H": -46.91323579044624,
+      "G": -32.936089765140565,
+      "G_symmetry_corrected": -32.936089765140565
+    },
+    "ts-opt": {
+      "E": 12.948930971120243,
+      "E_ZPE": 15.507641632515947,
+      "H": 14.066879880066326,
+      "G": 26.879995830981084,
+      "G_symmetry_corrected": 26.469316558565676
+    },
+    "product-endpoint-opt": {
+      "E": -45.80975013632265,
+      "E_ZPE": -39.48101357964513,
+      "H": -41.29953603547224,
+      "G": -28.23918135177661,
+      "G_symmetry_corrected": -28.64986062419202
+    },
+    "reactant-endpoint-opt": {
+      "E": -2.7918112360650014,
+      "E_ZPE": -2.08521398232615,
+      "H": -1.500375152495621,
+      "G": 4.639805051243539,
+      "G_symmetry_corrected": 4.229125778828129
+    },
+    "cyclohexene-conf-ts": {
+      "E": -45.781542687002165,
+      "E_ZPE": -39.545647055470965,
+      "H": -41.88751241266516,
+      "G": -27.350627936499446,
+      "G_symmetry_corrected": -27.761307208914857
+    }
+  },
+  "conformer_saddle_heights_kcal_mol": {
+    "A": {
+      "E": 5.591914979882218,
+      "E_ZPE": 5.343243171640083,
+      "H": 5.0257233777810795,
+      "G": 5.585461828641117,
+      "G_symmetry_corrected": 5.174782556225707
+    },
+    "B": {
+      "E": 0.028207449320478355,
+      "E_ZPE": -0.06463347582582948,
+      "H": -0.5879763771929231,
+      "G": 0.8885534152771642,
+      "G_symmetry_corrected": 0.8885534152771642
+    }
+  },
+  "conformer_barrier_status": "provisional_saddle_heights_until_IRC_endpoint_matching",
+  "low_frequency_interpretation": "RRHO entropy is sensitive to soft ring torsion in B and intermolecular modes in the encounter complex. Retain RRHO as course baseline; small B-side barriers do not support a precise rate estimate. No new thermodynamic model adopted.",
+  "constants": {
+    "R_J_mol_K": 8.31446261815324,
+    "hartree_to_kcal_mol": 627.5094740631,
+    "k_B_J_K": 1.380649e-23,
+    "h_J_s": 6.62607015e-34,
+    "c_m_s": 299792458.0
+  }
+}

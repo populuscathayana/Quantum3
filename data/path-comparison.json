@@ -1,0 +1,1222 @@
+{
+  "status": "passed_with_stated_limits",
+  "checked_utc": "2026-10-17T05:55:13.462754+00:00",
+  "scope": "Postprocessing only; no new quantum calculations or optimization",
+  "definitions": {
+    "quantity": "Electronic energy; not Gibbs energy",
+    "barrier": "Maximum calculated image minus same-program endpoint; no spline barrier",
+    "reference": "Weak complex3344 geometry evaluated separately in each program",
+    "shared_plot_coordinate": "q=(r(C1-C5)+r(C4-C6))/2; geometric projection, not path length",
+    "units": {
+      "energy": "kcal/mol",
+      "q": "angstrom",
+      "force": "eV/angstrom"
+    },
+    "kcal_per_hartree": 627.5094740631,
+    "eV_per_hartree_used_in_ASE": 27.211386024367243
+  },
+  "NEB": {
+    "phase": "NEB",
+    "iteration": 52,
+    "climbing_image": null,
+    "nimages": 17,
+    "peak_index": 8,
+    "threshold_eV_A": 0.05,
+    "whole_band_effective_fmax_eV_A": 0.04134237625726069,
+    "threshold_met": true,
+    "peak_true_fmax_eV_A": 0.021861828666251342,
+    "peak_energy_hartree": -234.401783821073,
+    "reference_complex_E_hartree": -234.426860773927,
+    "reference_product_E_hartree": -234.495413878159,
+    "forward_complex_barrier_kcal_mol": 15.736025496514529,
+    "reverse_product_barrier_kcal_mol": 58.7537478785445,
+    "separated_reactant_barrier_kcal_mol": null,
+    "bimolecular_activation_G_kcal_mol": null,
+    "peak_forming_distances_A": [
+      2.267221066614639,
+      2.2672792873261094
+    ],
+    "peak_vs_Gaussian_RMSD_A": 0.0010314080169068391,
+    "peak_vs_Gaussian_max_atom_difference_A": 0.0021032392992618065,
+    "proper_rotation_det": 0.999999999999999,
+    "mapping_1based": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "geometric_projection_monotone_decreasing": false,
+    "rows": [
+      {
+        "image": 0,
+        "energy_hartree": -234.426860773927,
+        "relative_complex_E_kcal_mol": 0.0,
+        "forming_distances_A": [
+          3.626479202347987,
+          3.6569476342485827
+        ],
+        "q_mean_forming_A": 3.641713418298285
+      },
+      {
+        "image": 1,
+        "energy_hartree": -234.42616322292,
+        "relative_complex_E_kcal_mol": 0.43771986553069914,
+        "forming_distances_A": [
+          3.4248284099133874,
+          3.424723341046315
+        ],
+        "q_mean_forming_A": 3.424775875479851
+      },
+      {
+        "image": 2,
+        "energy_hartree": -234.425045981591,
+        "relative_complex_E_kcal_mol": 1.138799384283111,
+        "forming_distances_A": [
+          3.10581572559028,
+          3.1057916165165222
+        ],
+        "q_mean_forming_A": 3.105803671053401
+      },
+      {
+        "image": 3,
+        "energy_hartree": -234.421704311085,
+        "relative_complex_E_kcal_mol": 3.2357292860064106,
+        "forming_distances_A": [
+          2.896417289029409,
+          2.8964424108600535
+        ],
+        "q_mean_forming_A": 2.896429849944731
+      },
+      {
+        "image": 4,
+        "energy_hartree": -234.41615362742,
+        "relative_complex_E_kcal_mol": 6.718835873325451,
+        "forming_distances_A": [
+          2.708067820293627,
+          2.708101765569818
+        ],
+        "q_mean_forming_A": 2.7080847929317224
+      },
+      {
+        "image": 5,
+        "energy_hartree": -234.409554367193,
+        "relative_complex_E_kcal_mol": 10.859934187561525,
+        "forming_distances_A": [
+          2.5331350074548626,
+          2.5331789078324234
+        ],
+        "q_mean_forming_A": 2.533156957643643
+      },
+      {
+        "image": 6,
+        "energy_hartree": -234.403891073099,
+        "relative_complex_E_kcal_mol": 14.413704885956035,
+        "forming_distances_A": [
+          2.384770295724143,
+          2.3848266149904376
+        ],
+        "q_mean_forming_A": 2.3847984553572905
+      },
+      {
+        "image": 7,
+        "energy_hartree": -234.402120924475,
+        "relative_complex_E_kcal_mol": 15.524489918009554,
+        "forming_distances_A": [
+          2.3134702188371077,
+          2.313529677957226
+        ],
+        "q_mean_forming_A": 2.3134999483971668
+      },
+      {
+        "image": 8,
+        "energy_hartree": -234.401783821073,
+        "relative_complex_E_kcal_mol": 15.736025496514529,
+        "forming_distances_A": [
+          2.267221066614639,
+          2.2672792873261094
+        ],
+        "q_mean_forming_A": 2.267250176970374
+      },
+      {
+        "image": 9,
+        "energy_hartree": -234.402361406324,
+        "relative_complex_E_kcal_mol": 15.373585279436579,
+        "forming_distances_A": [
+          2.2200476619576808,
+          2.220102464577876
+        ],
+        "q_mean_forming_A": 2.220075063267778
+      },
+      {
+        "image": 10,
+        "energy_hartree": -234.406442962443,
+        "relative_complex_E_kcal_mol": 12.812370145832181,
+        "forming_distances_A": [
+          2.132911261667121,
+          2.1329600471512475
+        ],
+        "q_mean_forming_A": 2.1329356544091844
+      },
+      {
+        "image": 11,
+        "energy_hartree": -234.428379486816,
+        "relative_complex_E_kcal_mol": -0.9530067262349303,
+        "forming_distances_A": [
+          1.946328503158701,
+          1.9463843001352417
+        ],
+        "q_mean_forming_A": 1.9463564016469714
+      },
+      {
+        "image": 12,
+        "energy_hartree": -234.469901324429,
+        "relative_complex_E_kcal_mol": -27.008353208904644,
+        "forming_distances_A": [
+          1.7138097557251393,
+          1.7138441760064664
+        ],
+        "q_mean_forming_A": 1.713826965865803
+      },
+      {
+        "image": 13,
+        "energy_hartree": -234.493698034769,
+        "relative_complex_E_kcal_mol": -41.94101439879505,
+        "forming_distances_A": [
+          1.5538671082541107,
+          1.5538727765594358
+        ],
+        "q_mean_forming_A": 1.5538699424067732
+      },
+      {
+        "image": 14,
+        "energy_hartree": -234.494911262466,
+        "relative_complex_E_kcal_mol": -42.702326272845376,
+        "forming_distances_A": [
+          1.5456392024602386,
+          1.5456235040545778
+        ],
+        "q_mean_forming_A": 1.5456313532574082
+      },
+      {
+        "image": 15,
+        "energy_hartree": -234.49535777901403,
+        "relative_complex_E_kcal_mol": -42.98251963706536,
+        "forming_distances_A": [
+          1.5454875107705062,
+          1.5453651654973204
+        ],
+        "q_mean_forming_A": 1.5454263381339133
+      },
+      {
+        "image": 16,
+        "energy_hartree": -234.495413878159,
+        "relative_complex_E_kcal_mol": -43.017722382029966,
+        "forming_distances_A": [
+          1.5454942415021067,
+          1.5454939840107187
+        ],
+        "q_mean_forming_A": 1.5454941127564128
+      }
+    ]
+  },
+  "CI_NEB": {
+    "phase": "CI-NEB",
+    "iteration": 453,
+    "climbing_image": 8,
+    "nimages": 17,
+    "peak_index": 8,
+    "threshold_eV_A": 0.02,
+    "whole_band_effective_fmax_eV_A": 0.018596335686491557,
+    "threshold_met": true,
+    "peak_true_fmax_eV_A": 3.13379216644399e-05,
+    "peak_energy_hartree": -234.40178045394,
+    "reference_complex_E_hartree": -234.426860773927,
+    "reference_product_E_hartree": -234.495413862243,
+    "forward_complex_barrier_kcal_mol": 15.738138404366314,
+    "reverse_product_barrier_kcal_mol": 58.75585079894597,
+    "separated_reactant_barrier_kcal_mol": null,
+    "bimolecular_activation_G_kcal_mol": null,
+    "peak_forming_distances_A": [
+      2.2711708505905417,
+      2.271219222141752
+    ],
+    "peak_vs_Gaussian_RMSD_A": 9.120796674331005e-05,
+    "peak_vs_Gaussian_max_atom_difference_A": 0.00014805375894863827,
+    "proper_rotation_det": 1.0,
+    "mapping_1based": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "geometric_projection_monotone_decreasing": false,
+    "rows": [
+      {
+        "image": 0,
+        "energy_hartree": -234.426860773927,
+        "relative_complex_E_kcal_mol": 0.0,
+        "forming_distances_A": [
+          3.626479202347987,
+          3.6569476342485827
+        ],
+        "q_mean_forming_A": 3.641713418298285
+      },
+      {
+        "image": 1,
+        "energy_hartree": -234.426009068646,
+        "relative_complex_E_kcal_mol": 0.534453132924105,
+        "forming_distances_A": [
+          3.758869996087432,
+          3.756664427860663
+        ],
+        "q_mean_forming_A": 3.7577672119740475
+      },
+      {
+        "image": 2,
+        "energy_hartree": -234.425969004154,
+        "relative_complex_E_kcal_mol": 0.5595939812262386,
+        "forming_distances_A": [
+          3.3429142676469064,
+          3.342773876034967
+        ],
+        "q_mean_forming_A": 3.3428440718409367
+      },
+      {
+        "image": 3,
+        "energy_hartree": -234.423433363285,
+        "relative_complex_E_kcal_mol": 2.1507326493534396,
+        "forming_distances_A": [
+          2.981852564076271,
+          2.981845006494251
+        ],
+        "q_mean_forming_A": 2.981848785285261
+      },
+      {
+        "image": 4,
+        "energy_hartree": -234.417248217854,
+        "relative_complex_E_kcal_mol": 6.031970005766833,
+        "forming_distances_A": [
+          2.738653317862262,
+          2.738664466549751
+        ],
+        "q_mean_forming_A": 2.7386588922060064
+      },
+      {
+        "image": 5,
+        "energy_hartree": -234.409731137006,
+        "relative_complex_E_kcal_mol": 10.749009455187526,
+        "forming_distances_A": [
+          2.535863442625109,
+          2.5358647220914654
+        ],
+        "q_mean_forming_A": 2.5358640823582874
+      },
+      {
+        "image": 6,
+        "energy_hartree": -234.404065100235,
+        "relative_complex_E_kcal_mol": 14.304501209382272,
+        "forming_distances_A": [
+          2.3900608369906102,
+          2.3900766803457905
+        ],
+        "q_mean_forming_A": 2.3900687586682006
+      },
+      {
+        "image": 7,
+        "energy_hartree": -234.402193684036,
+        "relative_complex_E_kcal_mol": 15.478832604157734,
+        "forming_distances_A": [
+          2.3179951369681153,
+          2.318033399957256
+        ],
+        "q_mean_forming_A": 2.3180142684626857
+      },
+      {
+        "image": 8,
+        "energy_hartree": -234.40178045394,
+        "relative_complex_E_kcal_mol": 15.738138404366314,
+        "forming_distances_A": [
+          2.2711708505905417,
+          2.271219222141752
+        ],
+        "q_mean_forming_A": 2.271195036366147
+      },
+      {
+        "image": 9,
+        "energy_hartree": -234.402387904043,
+        "relative_complex_E_kcal_mol": 15.356957709719474,
+        "forming_distances_A": [
+          2.2189508920173466,
+          2.218996415289717
+        ],
+        "q_mean_forming_A": 2.218973653653532
+      },
+      {
+        "image": 10,
+        "energy_hartree": -234.406863415436,
+        "relative_complex_E_kcal_mol": 12.54853190933675,
+        "forming_distances_A": [
+          2.1271514865915955,
+          2.1271818236546025
+        ],
+        "q_mean_forming_A": 2.1271666551230988
+      },
+      {
+        "image": 11,
+        "energy_hartree": -234.428247899195,
+        "relative_complex_E_kcal_mol": -0.870434247379948,
+        "forming_distances_A": [
+          1.9472548957905271,
+          1.947294318553471
+        ],
+        "q_mean_forming_A": 1.947274607171999
+      },
+      {
+        "image": 12,
+        "energy_hartree": -234.46497985358,
+        "relative_complex_E_kcal_mol": -23.920083624823857,
+        "forming_distances_A": [
+          1.7424208000149748,
+          1.7424369860712938
+        ],
+        "q_mean_forming_A": 1.7424288930431344
+      },
+      {
+        "image": 13,
+        "energy_hartree": -234.491996431971,
+        "relative_complex_E_kcal_mol": -40.87324252194403,
+        "forming_distances_A": [
+          1.5641172431774237,
+          1.5641122824896885
+        ],
+        "q_mean_forming_A": 1.564114762833556
+      },
+      {
+        "image": 14,
+        "energy_hartree": -234.494969596217,
+        "relative_complex_E_kcal_mol": -42.73893125426405,
+        "forming_distances_A": [
+          1.5467831977014221,
+          1.546790050336274
+        ],
+        "q_mean_forming_A": 1.5467866240188481
+      },
+      {
+        "image": 15,
+        "energy_hartree": -234.49537101069,
+        "relative_complex_E_kcal_mol": -42.99082263909984,
+        "forming_distances_A": [
+          1.54572621065608,
+          1.545728520646883
+        ],
+        "q_mean_forming_A": 1.5457273656514814
+      },
+      {
+        "image": 16,
+        "energy_hartree": -234.495413862243,
+        "relative_complex_E_kcal_mol": -43.01771239457966,
+        "forming_distances_A": [
+          1.5454942415021475,
+          1.5454939840107662
+        ],
+        "q_mean_forming_A": 1.5454941127564568
+      }
+    ]
+  },
+  "Gaussian_TS": {
+    "peak_energy_hartree": -234.4017764178209,
+    "complex_energy_hartree": -234.4268608872318,
+    "product_energy_hartree": -234.4954143365076,
+    "separated_energy_hartree": -234.4224118528324,
+    "forward_complex_barrier_kcal_mol": 15.740742207185244,
+    "reverse_product_barrier_kcal_mol": 58.75868110744289,
+    "separated_reactant_barrier_kcal_mol": 12.948930971120243,
+    "complex_binding_energy_kcal_mol": -2.7918112360650014,
+    "bimolecular_activation_G_kcal_mol": 26.469316558565676
+  },
+  "Gaussian_IRC": {
+    "rows": [
+      {
+        "source_job": "3286",
+        "source_point": 6,
+        "branch": "reactant",
+        "s": -8.91817,
+        "energy_hartree": -234.42606,
+        "relative_complex_E_kcal_mol": 0.5025643256134195,
+        "forming_distances_A": [
+          3.3485045333478345,
+          3.3485319505702793
+        ],
+        "q_mean_forming_A": 3.3485182419590567
+      },
+      {
+        "source_job": "3286",
+        "source_point": 5,
+        "branch": "reactant",
+        "s": -8.771609999999999,
+        "energy_hartree": -234.426038,
+        "relative_complex_E_kcal_mol": 0.5163695340436226,
+        "forming_distances_A": [
+          3.338368787756829,
+          3.3383808255142196
+        ],
+        "q_mean_forming_A": 3.3383748066355245
+      },
+      {
+        "source_job": "3286",
+        "source_point": 4,
+        "branch": "reactant",
+        "s": -8.62506,
+        "energy_hartree": -234.426014,
+        "relative_complex_E_kcal_mol": 0.5314297614187834,
+        "forming_distances_A": [
+          3.328419545452466,
+          3.328420678302549
+        ],
+        "q_mean_forming_A": 3.3284201118775076
+      },
+      {
+        "source_job": "3286",
+        "source_point": 3,
+        "branch": "reactant",
+        "s": -8.478489999999999,
+        "energy_hartree": -234.425987,
+        "relative_complex_E_kcal_mol": 0.5483725172292154,
+        "forming_distances_A": [
+          3.3185957261665666,
+          3.3185849053668948
+        ],
+        "q_mean_forming_A": 3.3185903157667305
+      },
+      {
+        "source_job": "3286",
+        "source_point": 2,
+        "branch": "reactant",
+        "s": -8.33193,
+        "energy_hartree": -234.425958,
+        "relative_complex_E_kcal_mol": 0.5665702919667701,
+        "forming_distances_A": [
+          3.30881189182507,
+          3.308792493747077
+        ],
+        "q_mean_forming_A": 3.3088021927860733
+      },
+      {
+        "source_job": "3286",
+        "source_point": 1,
+        "branch": "reactant",
+        "s": -8.185369999999999,
+        "energy_hartree": -234.425926,
+        "relative_complex_E_kcal_mol": 0.586650595139596,
+        "forming_distances_A": [
+          3.298965173730848,
+          3.29894030849332
+        ],
+        "q_mean_forming_A": 3.298952741112084
+      },
+      {
+        "source_job": "3099",
+        "source_point": 28,
+        "branch": "reactant",
+        "s": -8.03882,
+        "energy_hartree": -234.425891,
+        "relative_complex_E_kcal_mol": 0.6086134267298584,
+        "forming_distances_A": [
+          3.2889511091492376,
+          3.2889206403812783
+        ],
+        "q_mean_forming_A": 3.288935874765258
+      },
+      {
+        "source_job": "3099",
+        "source_point": 27,
+        "branch": "reactant",
+        "s": -7.75176,
+        "energy_hartree": -234.425813,
+        "relative_complex_E_kcal_mol": 0.6575591657080484,
+        "forming_distances_A": [
+          3.268259168311626,
+          3.2682239315123436
+        ],
+        "q_mean_forming_A": 3.268241549911985
+      },
+      {
+        "source_job": "3099",
+        "source_point": 26,
+        "branch": "reactant",
+        "s": -7.46476,
+        "energy_hartree": -234.425719,
+        "relative_complex_E_kcal_mol": 0.7165450562815687,
+        "forming_distances_A": [
+          3.24557947791577,
+          3.245542003756383
+        ],
+        "q_mean_forming_A": 3.2455607408360763
+      },
+      {
+        "source_job": "3099",
+        "source_point": 25,
+        "branch": "reactant",
+        "s": -7.17775,
+        "energy_hartree": -234.425607,
+        "relative_complex_E_kcal_mol": 0.7868261173597074,
+        "forming_distances_A": [
+          3.220527217860765,
+          3.220489310543042
+        ],
+        "q_mean_forming_A": 3.2205082642019036
+      },
+      {
+        "source_job": "3099",
+        "source_point": 24,
+        "branch": "reactant",
+        "s": -6.89081,
+        "energy_hartree": -234.42547,
+        "relative_complex_E_kcal_mol": 0.8727949153211553,
+        "forming_distances_A": [
+          3.1929800699966795,
+          3.1929419555663707
+        ],
+        "q_mean_forming_A": 3.192961012781525
+      },
+      {
+        "source_job": "3099",
+        "source_point": 23,
+        "branch": "reactant",
+        "s": -6.6038,
+        "energy_hartree": -234.425304,
+        "relative_complex_E_kcal_mol": 0.9769614880023231,
+        "forming_distances_A": [
+          3.163230094455508,
+          3.1631952358242135
+        ],
+        "q_mean_forming_A": 3.1632126651398607
+      },
+      {
+        "source_job": "3099",
+        "source_point": 22,
+        "branch": "reactant",
+        "s": -6.31677,
+        "energy_hartree": -234.4251,
+        "relative_complex_E_kcal_mol": 1.1049734207268593,
+        "forming_distances_A": [
+          3.1316773263490925,
+          3.1316445704118463
+        ],
+        "q_mean_forming_A": 3.1316609483804694
+      },
+      {
+        "source_job": "3099",
+        "source_point": 21,
+        "branch": "reactant",
+        "s": -6.02971,
+        "energy_hartree": -234.424851,
+        "relative_complex_E_kcal_mol": 1.261223279766446,
+        "forming_distances_A": [
+          3.0986390253971177,
+          3.098611072716613
+        ],
+        "q_mean_forming_A": 3.0986250490568654
+      },
+      {
+        "source_job": "3099",
+        "source_point": 20,
+        "branch": "reactant",
+        "s": -5.74262,
+        "energy_hartree": -234.424548,
+        "relative_complex_E_kcal_mol": 1.4513586504090616,
+        "forming_distances_A": [
+          3.064389237082979,
+          3.0643640490414974
+        ],
+        "q_mean_forming_A": 3.0643766430622383
+      },
+      {
+        "source_job": "3099",
+        "source_point": 19,
+        "branch": "reactant",
+        "s": -5.45551,
+        "energy_hartree": -234.424184,
+        "relative_complex_E_kcal_mol": 1.6797720989620581,
+        "forming_distances_A": [
+          3.029138144023643,
+          3.0291208999511725
+        ],
+        "q_mean_forming_A": 3.0291295219874077
+      },
+      {
+        "source_job": "3099",
+        "source_point": 18,
+        "branch": "reactant",
+        "s": -5.16838,
+        "energy_hartree": -234.423747,
+        "relative_complex_E_kcal_mol": 1.9539937391308504,
+        "forming_distances_A": [
+          2.9930712992852344,
+          2.9930609860946706
+        ],
+        "q_mean_forming_A": 2.9930661426899525
+      },
+      {
+        "source_job": "3099",
+        "source_point": 17,
+        "branch": "reactant",
+        "s": -4.88125,
+        "energy_hartree": -234.423228,
+        "relative_complex_E_kcal_mol": 2.279671156167748,
+        "forming_distances_A": [
+          2.9563089557520876,
+          2.956307083958803
+        ],
+        "q_mean_forming_A": 2.9563080198554452
+      },
+      {
+        "source_job": "3099",
+        "source_point": 16,
+        "branch": "reactant",
+        "s": -4.59412,
+        "energy_hartree": -234.422617,
+        "relative_complex_E_kcal_mol": 2.6630794448153736,
+        "forming_distances_A": [
+          2.9189572993137465,
+          2.918960482780471
+        ],
+        "q_mean_forming_A": 2.918958891047109
+      },
+      {
+        "source_job": "3099",
+        "source_point": 15,
+        "branch": "reactant",
+        "s": -4.30697,
+        "energy_hartree": -234.421904,
+        "relative_complex_E_kcal_mol": 3.1104936998163497,
+        "forming_distances_A": [
+          2.881135688418024,
+          2.8811437812662177
+        ],
+        "q_mean_forming_A": 2.8811397348421206
+      },
+      {
+        "source_job": "3099",
+        "source_point": 14,
+        "branch": "reactant",
+        "s": -4.01982,
+        "energy_hartree": -234.421078,
+        "relative_complex_E_kcal_mol": 3.6288165254036127,
+        "forming_distances_A": [
+          2.8428897888678346,
+          2.8429002171434012
+        ],
+        "q_mean_forming_A": 2.842895003005618
+      },
+      {
+        "source_job": "3099",
+        "source_point": 13,
+        "branch": "reactant",
+        "s": -3.73266,
+        "energy_hartree": -234.420131,
+        "relative_complex_E_kcal_mol": 4.223067997339158,
+        "forming_distances_A": [
+          2.8042958480042723,
+          2.804306473740344
+        ],
+        "q_mean_forming_A": 2.804301160872308
+      },
+      {
+        "source_job": "3099",
+        "source_point": 12,
+        "branch": "reactant",
+        "s": -3.44551,
+        "energy_hartree": -234.419056,
+        "relative_complex_E_kcal_mol": 4.8976406819481735,
+        "forming_distances_A": [
+          2.7653806951092648,
+          2.7653869032167995
+        ],
+        "q_mean_forming_A": 2.765383799163032
+      },
+      {
+        "source_job": "3099",
+        "source_point": 11,
+        "branch": "reactant",
+        "s": -3.15835,
+        "energy_hartree": -234.417848,
+        "relative_complex_E_kcal_mol": 5.655672126628722,
+        "forming_distances_A": [
+          2.7261375989837715,
+          2.7261409564154966
+        ],
+        "q_mean_forming_A": 2.726139277699634
+      },
+      {
+        "source_job": "3099",
+        "source_point": 10,
+        "branch": "reactant",
+        "s": -2.87119,
+        "energy_hartree": -234.416504,
+        "relative_complex_E_kcal_mol": 6.499044859762568,
+        "forming_distances_A": [
+          2.6865983860460054,
+          2.6865958080146704
+        ],
+        "q_mean_forming_A": 2.686597097030338
+      },
+      {
+        "source_job": "3099",
+        "source_point": 9,
+        "branch": "reactant",
+        "s": -2.58403,
+        "energy_hartree": -234.415027,
+        "relative_complex_E_kcal_mol": 7.425876352950113,
+        "forming_distances_A": [
+          2.6467062859624226,
+          2.6467005304754445
+        ],
+        "q_mean_forming_A": 2.646703408218934
+      },
+      {
+        "source_job": "3099",
+        "source_point": 8,
+        "branch": "reactant",
+        "s": -2.29687,
+        "energy_hartree": -234.413426,
+        "relative_complex_E_kcal_mol": 8.430519020939046,
+        "forming_distances_A": [
+          2.606421356606986,
+          2.606413883863612
+        ],
+        "q_mean_forming_A": 2.606417620235299
+      },
+      {
+        "source_job": "3099",
+        "source_point": 7,
+        "branch": "reactant",
+        "s": -2.00973,
+        "energy_hartree": -234.411714,
+        "relative_complex_E_kcal_mol": 9.504815240533642,
+        "forming_distances_A": [
+          2.5657147798025015,
+          2.5657043522210423
+        ],
+        "q_mean_forming_A": 2.5657095660117717
+      },
+      {
+        "source_job": "3099",
+        "source_point": 6,
+        "branch": "reactant",
+        "s": -1.72259,
+        "energy_hartree": -234.409921,
+        "relative_complex_E_kcal_mol": 10.62993972752386,
+        "forming_distances_A": [
+          2.5245429939262274,
+          2.5245315711769183
+        ],
+        "q_mean_forming_A": 2.524537282551573
+      },
+      {
+        "source_job": "3099",
+        "source_point": 5,
+        "branch": "reactant",
+        "s": -1.43546,
+        "energy_hartree": -234.408087,
+        "relative_complex_E_kcal_mol": 11.78079210295705,
+        "forming_distances_A": [
+          2.482978234409839,
+          2.482967282403254
+        ],
+        "q_mean_forming_A": 2.4829727584065466
+      },
+      {
+        "source_job": "3099",
+        "source_point": 4,
+        "branch": "reactant",
+        "s": -1.14835,
+        "energy_hartree": -234.406281,
+        "relative_complex_E_kcal_mol": 12.91407421310733,
+        "forming_distances_A": [
+          2.4410147101836563,
+          2.4410044067807415
+        ],
+        "q_mean_forming_A": 2.441009558482199
+      },
+      {
+        "source_job": "3099",
+        "source_point": 3,
+        "branch": "reactant",
+        "s": -0.86125,
+        "energy_hartree": -234.404597,
+        "relative_complex_E_kcal_mol": 13.970800167436847,
+        "forming_distances_A": [
+          2.3987320959308898,
+          2.398721907990378
+        ],
+        "q_mean_forming_A": 2.398727001960634
+      },
+      {
+        "source_job": "3099",
+        "source_point": 2,
+        "branch": "reactant",
+        "s": -0.57417,
+        "energy_hartree": -234.403166,
+        "relative_complex_E_kcal_mol": 14.868766224819028,
+        "forming_distances_A": [
+          2.356260423500552,
+          2.3562490281593753
+        ],
+        "q_mean_forming_A": 2.356254725829964
+      },
+      {
+        "source_job": "3099",
+        "source_point": 1,
+        "branch": "reactant",
+        "s": -0.28714,
+        "energy_hartree": -234.402159,
+        "relative_complex_E_kcal_mol": 15.500668265192477,
+        "forming_distances_A": [
+          2.3137249184189983,
+          2.3137115655400953
+        ],
+        "q_mean_forming_A": 2.313718241979547
+      },
+      {
+        "source_job": "3025",
+        "source_point": 0,
+        "branch": "TS",
+        "s": 0.0,
+        "energy_hartree": -234.4017764178209,
+        "relative_complex_E_kcal_mol": 15.740742207185244,
+        "forming_distances_A": [
+          2.271198677873197,
+          2.2711812166264074
+        ],
+        "q_mean_forming_A": 2.2711899472498023
+      },
+      {
+        "source_job": "3100",
+        "source_point": 1,
+        "branch": "product",
+        "s": 0.28716,
+        "energy_hartree": -234.402226,
+        "relative_complex_E_kcal_mol": 15.458625130429388,
+        "forming_distances_A": [
+          2.2287498986425103,
+          2.2287277355913173
+        ],
+        "q_mean_forming_A": 2.2287388171169136
+      },
+      {
+        "source_job": "3100",
+        "source_point": 2,
+        "branch": "product",
+        "s": 0.57426,
+        "energy_hartree": -234.403684,
+        "relative_complex_E_kcal_mol": 14.54371631725461,
+        "forming_distances_A": [
+          2.186376760294072,
+          2.1863526130368354
+        ],
+        "q_mean_forming_A": 2.1863646866654536
+      },
+      {
+        "source_job": "3100",
+        "source_point": 3,
+        "branch": "product",
+        "s": 0.86139,
+        "energy_hartree": -234.406256,
+        "relative_complex_E_kcal_mol": 12.929761949954969,
+        "forming_distances_A": [
+          2.1440703047549534,
+          2.144044412689952
+        ],
+        "q_mean_forming_A": 2.1440573587224527
+      },
+      {
+        "source_job": "3100",
+        "source_point": 4,
+        "branch": "product",
+        "s": 1.14853,
+        "energy_hartree": -234.409948,
+        "relative_complex_E_kcal_mol": 10.612996971713429,
+        "forming_distances_A": [
+          2.10178252254842,
+          2.1017557679497396
+        ],
+        "q_mean_forming_A": 2.10176914524908
+      },
+      {
+        "source_job": "3100",
+        "source_point": 5,
+        "branch": "product",
+        "s": 1.43567,
+        "energy_hartree": -234.414681,
+        "relative_complex_E_kcal_mol": 7.642994630980657,
+        "forming_distances_A": [
+          2.059467916066186,
+          2.059441153379965
+        ],
+        "q_mean_forming_A": 2.0594545347230753
+      },
+      {
+        "source_job": "3100",
+        "source_point": 6,
+        "branch": "product",
+        "s": 1.72282,
+        "energy_hartree": -234.420349,
+        "relative_complex_E_kcal_mol": 4.08627093199992,
+        "forming_distances_A": [
+          2.017080486917168,
+          2.0170541841175216
+        ],
+        "q_mean_forming_A": 2.0170673355173445
+      },
+      {
+        "source_job": "3100",
+        "source_point": 7,
+        "branch": "product",
+        "s": 2.00996,
+        "energy_hartree": -234.426882,
+        "relative_complex_E_kcal_mol": -0.013248462066093805,
+        "forming_distances_A": [
+          1.9746117435366883,
+          1.9745851268289245
+        ],
+        "q_mean_forming_A": 1.9745984351828065
+      },
+      {
+        "source_job": "3100",
+        "source_point": 8,
+        "branch": "product",
+        "s": 2.2971,
+        "energy_hartree": -234.4342,
+        "relative_complex_E_kcal_mol": -4.605362793258565,
+        "forming_distances_A": [
+          1.932071675143808,
+          1.9320467291372638
+        ],
+        "q_mean_forming_A": 1.932059202140536
+      },
+      {
+        "source_job": "3100",
+        "source_point": 9,
+        "branch": "product",
+        "s": 2.58424,
+        "energy_hartree": -234.442123,
+        "relative_complex_E_kcal_mol": -9.577120356263789,
+        "forming_distances_A": [
+          1.8895321803128942,
+          1.8895074772445333
+        ],
+        "q_mean_forming_A": 1.8895198287787136
+      },
+      {
+        "source_job": "3100",
+        "source_point": 10,
+        "branch": "product",
+        "s": 2.87138,
+        "energy_hartree": -234.450384,
+        "relative_complex_E_kcal_mol": -14.760976121501892,
+        "forming_distances_A": [
+          1.8470854885960204,
+          1.8470637849021347
+        ],
+        "q_mean_forming_A": 1.8470746367490776
+      },
+      {
+        "source_job": "3100",
+        "source_point": 11,
+        "branch": "product",
+        "s": 3.15852,
+        "energy_hartree": -234.458698,
+        "relative_complex_E_kcal_mol": -19.97808988885271,
+        "forming_distances_A": [
+          1.8048489067423346,
+          1.8048273604713554
+        ],
+        "q_mean_forming_A": 1.8048381336068449
+      },
+      {
+        "source_job": "3100",
+        "source_point": 12,
+        "branch": "product",
+        "s": 3.44566,
+        "energy_hartree": -234.466783,
+        "relative_complex_E_kcal_mol": -25.051503986649188,
+        "forming_distances_A": [
+          1.762911675596086,
+          1.7628919950856319
+        ],
+        "q_mean_forming_A": 1.762901835340859
+      },
+      {
+        "source_job": "3100",
+        "source_point": 13,
+        "branch": "product",
+        "s": 3.7328,
+        "energy_hartree": -234.474356,
+        "relative_complex_E_kcal_mol": -29.80363323373395,
+        "forming_distances_A": [
+          1.7214254329264453,
+          1.7214070860441466
+        ],
+        "q_mean_forming_A": 1.721416259485296
+      },
+      {
+        "source_job": "3100",
+        "source_point": 14,
+        "branch": "product",
+        "s": 4.01992,
+        "energy_hartree": -234.481124,
+        "relative_complex_E_kcal_mol": -34.05061735418918,
+        "forming_distances_A": [
+          1.6806028829164255,
+          1.6805871479274739
+        ],
+        "q_mean_forming_A": 1.6805950154219498
+      },
+      {
+        "source_job": "3100",
+        "source_point": 15,
+        "branch": "product",
+        "s": 4.30698,
+        "energy_hartree": -234.486775,
+        "relative_complex_E_kcal_mol": -37.59667339211994,
+        "forming_distances_A": [
+          1.6408272911860649,
+          1.6408147949838823
+        ],
+        "q_mean_forming_A": 1.6408210430849737
+      },
+      {
+        "source_job": "3100",
+        "source_point": 16,
+        "branch": "product",
+        "s": 4.59386,
+        "energy_hartree": -234.491005,
+        "relative_complex_E_kcal_mol": -40.25103846741115,
+        "forming_distances_A": [
+          1.602988269426199,
+          1.6029797722931503
+        ],
+        "q_mean_forming_A": 1.6029840208596746
+      },
+      {
+        "source_job": "3100",
+        "source_point": 17,
+        "branch": "product",
+        "s": 4.87974,
+        "energy_hartree": -234.493587,
+        "relative_complex_E_kcal_mol": -41.871267929435575,
+        "forming_distances_A": [
+          1.5693894998619684,
+          1.56938513919847
+        ],
+        "q_mean_forming_A": 1.569387319530219
+      },
+      {
+        "source_job": "3100",
+        "source_point": 18,
+        "branch": "product",
+        "s": 5.15458,
+        "energy_hartree": -234.494662,
+        "relative_complex_E_kcal_mol": -42.54584061406243,
+        "forming_distances_A": [
+          1.5492408662006045,
+          1.5492394958501414
+        ],
+        "q_mean_forming_A": 1.549240181025373
+      },
+      {
+        "source_job": "3100",
+        "source_point": 19,
+        "branch": "product",
+        "s": 5.43516,
+        "energy_hartree": -234.495102,
+        "relative_complex_E_kcal_mol": -42.82194478264866,
+        "forming_distances_A": [
+          1.5460839099004298,
+          1.546082840381459
+        ],
+        "q_mean_forming_A": 1.5460833751409444
+      },
+      {
+        "source_job": "3100",
+        "source_point": 20,
+        "branch": "product",
+        "s": 5.72155,
+        "energy_hartree": -234.495335,
+        "relative_complex_E_kcal_mol": -42.96815449011074,
+        "forming_distances_A": [
+          1.5456566419790652,
+          1.545655998273225
+        ],
+        "q_mean_forming_A": 1.545656320126145
+      }
+    ],
+    "naccepted_nonTS": 54,
+    "original_TS_included": true,
+    "TS_forward_complex_barrier_kcal_mol": 15.740742207185244,
+    "reactant_last_above_optimized_complex_kcal_mol": 0.5025643256134195,
+    "product_last_above_optimized_B_kcal_mol": 0.049784410146899376,
+    "TS_minus_unoptimized_last_reactant_point_kcal_mol": 15.238177881571824,
+    "corrected_endpoint_energy_decimal_places": 6,
+    "maximum_energy_rounding_kcal_mol": 0.00031375473703155,
+    "precision_source_files": [
+      "received/irc-forward-3099-diagnostic/calc.out",
+      "received/stage3-irc-forward-repair1-3286/raw/jobs/irc-forward-repair1/calc.out",
+      "received/stage3-irc-reverse-3100/raw/jobs/irc-reverse/calc.out"
+    ],
+    "raw_coordinate_unit": "sqrt(amu)*bohr",
+    "optimized_endpoints_appended": false
+  },
+  "differences": {
+    "CI_minus_NEB_barrier_kcal_mol": 0.002112907851785195,
+    "CI_minus_Gaussian_barrier_kcal_mol": -0.0026038028189301343,
+    "original_Gaussian_TS_geometry_ORCA_barrier_kcal_mol": 15.738015681083777,
+    "fixed_geometry_ORCA_minus_Gaussian_barrier_kcal_mol": -0.002726526101467286,
+    "ORCA_CI_minus_original_TS_geometry_kcal_mol": 0.00012272328253763954
+  },
+  "frequency_validation": {
+    "status": "passed_with_stated_limits",
+    "imaginary_count": 1,
+    "imaginary_frequency_cm_1": -516.0945306662845,
+    "mode_overlap": 0.9999817556592997,
+    "additional_OptTS": false,
+    "additional_IRC": false
+  },
+  "NEB_effective_force_reconstruction_error_eV_A": 0.0,
+  "limitations": [
+    "17-image ORCA NEB final/CI400 only; failed Gaussian3423 band excluded from barrier estimate",
+    "NEB sampled maximum is not a stationary-point certificate",
+    "CI400 meets separately accepted0.02 criterion, not original0.01; raw limit-exit unchanged",
+    "Same saddle does not prove pointwise identical full paths; Cartesian NEB and mass-weighted Gaussian IRC use different metrics",
+    "q is nonmonotone near reactants and is not a unique full molecular coordinate; preserve original image order",
+    "IRC endpoints here are finite path points, not appended optimized minima",
+    "IRC corrected energies printed to6decimalsEh (including trailing zeros); no interpolation-derived new energies",
+    "ORCA separated-reactant thermal corrections unavailable; no ORCA bimolecular activation G",
+    "Grid/implementation/mass and finite-difference convergence uncertainties not quantified"
+  ]
+}
