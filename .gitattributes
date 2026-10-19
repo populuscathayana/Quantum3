@@ -1,0 +1,11 @@
+*.pdf binary
+*.png binary
+*.gif binary
+# Preserve scientific text bytes across checkouts.
+*.out -text
+*.fchk -text
+*.gjf -text
+*.inp -text
+*.json -text
+*.tex -text
+*.py -text

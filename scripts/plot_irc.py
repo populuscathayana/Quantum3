@@ -97,7 +97,7 @@ def render(record, coords):
     (DEST/'full-irc-data.json').write_text(json.dumps(record, indent=2)+'\n')
 
 if __name__ == '__main__':
-    record = json.loads((ROOT/'data/irc.json').read_text())
+    record = json.loads((ROOT/'analysis/irc.json').read_text())
     target = np.array(next(p['coordinates_A'] for p in record['points'] if p['branch']=='TS'))
     aligned = []
     for point in record['points']:

@@ -1,3 +1,17 @@
+# Only curated publication artifacts enter this repository.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/ENVIRONMENT.md
+!/POSTPROCESS.md
+!/THIRD_PARTY_NOTICES.md
+!/requirements.txt
+!/reproduce.py
+!/data/
+!/analysis/
+!/scripts/
+!/experiment-report/
 .venv/
 build/
 __pycache__/
@@ -12,6 +26,14 @@ __pycache__/
 *.densities
 *.tmp
 *.run
+*.key
+*.pem
+*.rwf
+*.cube
+*.tar.gz
+slurm-*.out
+submitted.jobid
+.submission-lock/
 .env
 .env.*
 software/

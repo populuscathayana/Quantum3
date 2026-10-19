@@ -35,4 +35,4 @@ xelatex -interaction=nonstopmode -halt-on-error -output-directory=../build/tex c
 xelatex -interaction=nonstopmode -halt-on-error -output-directory=../build/tex cycloaddition_mechanism.tex
 ```
 
-本次发布采用已有排版 PDF，仓库地址放在末页参考文献之后，封面、正文和书签保持不变。TeX 在相同位置加入该地址。
+仓库地址列于报告正文末尾的中文“数据与代码”节；封面和科学内容保持原样。

@@ -16,12 +16,12 @@ KCAL = 627.5094740631
 
 
 def load(name):
-    return json.loads((ROOT/'data'/name).read_text())
+    return json.loads((ROOT/'analysis'/name).read_text())
 
 
 class ScientificChecks(unittest.TestCase):
     def test_manifest(self):
-        for name, record in json.loads((ROOT/'MANIFEST.json').read_text())['files'].items():
+        for name, record in json.loads((ROOT/'data/manifest.json').read_text())['files'].items():
             p = ROOT/name
             self.assertEqual(p.stat().st_size, record['bytes'], name)
             self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(), record['sha256'], name)
@@ -54,7 +54,7 @@ class ScientificChecks(unittest.TestCase):
         a = load('conformer-audit.json')['stationary_points']
         for label, imaginary in [('A',0),('B',0),('TS',1),('cycloaddition-CI400',1)]:
             dirname = f'conformer-{label}' if label in a else label
-            directory = ROOT/'sources/orca'/dirname
+            directory = ROOT/'data/calculations/orca'/dirname
             text = (directory/'calc.hess').read_text()
             rows = [v.split() for v in section(text,'atoms')[1:17]]
             self.assertEqual([v[0] for v in rows],['C']*6+['H']*10)
@@ -132,6 +132,9 @@ class ScientificChecks(unittest.TestCase):
         self.assertIn(url,tex)
         self.assertNotIn(url,pdf.pages[0].extract_text())
         self.assertIn(url,pdf.pages[-1].extract_text())
+        self.assertIn('数据与代码',pdf.pages[-1].extract_text())
+        self.assertNotIn('Data, figures and reproducibility',tex)
+        self.assertNotIn('Data, figures and reproducibility',pdf.pages[-1].extract_text())
         self.assertGreater(tex.index(url),tex.index('\\end{thebibliography}'))
         self.assertTrue(any(x.get_object().get('/A',{}).get('/URI')==url for x in pdf.pages[-1].get('/Annots',[])))
         for value in ['5.5907','0.0272','26.47']:

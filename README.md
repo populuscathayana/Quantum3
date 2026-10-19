@@ -1,13 +1,15 @@
-# 1,3-丁二烯与乙烯的环加成反应
+# Quantum3：环加成反应的机理研究
 
 B3LYP-D3(BJ)/def2-SVP 气相计算：环加成过渡态、双向 IRC、NEB/CI-NEB 对照，以及环己烯 A/B 构象转化。
 
-- **[实验报告 PDF（15 页）](experiment-report/cycloaddition_mechanism.pdf)**
-- [报告 TeX 源文件](experiment-report/cycloaddition_mechanism.tex)
-- [环境与离线复现](ENVIRONMENT.md)
-- [数据索引](data/README.md) · [来源及第三方说明](THIRD_PARTY_NOTICES.md)
+- [在线阅读实验报告 PDF](experiment-report/cycloaddition_mechanism.pdf)
+- [直接下载 PDF](https://github.com/populuscathayana/Quantum3/raw/refs/heads/main/experiment-report/cycloaddition_mechanism.pdf)
+- [LaTeX 源码](experiment-report/cycloaddition_mechanism.tex)
+- [环境与复现步骤](ENVIRONMENT.md) · [后处理范围](POSTPROCESS.md) · [数据与第三方说明](THIRD_PARTY_NOTICES.md)
 
-PDF 与 TeX 均注明本仓库地址。报告版本：2026-10-19。
+相关实验：[Quantum1](https://github.com/populuscathayana/Quantum1) · [Quantum2](https://github.com/populuscathayana/Quantum2) · [Quantum4](https://github.com/populuscathayana/Quantum4)
+
+报告共 15 页，含 11 幅图；正文末尾“数据与代码”节注明仓库地址，封面保持原样。
 
 ## 主要结果
 
@@ -32,23 +34,35 @@ PDF 与 TeX 均注明本仓库地址。报告版本：2026-10-19。
 
 [完整 IRC 动画](experiment-report/figures/irc-full-path.gif) · [环加成 TS 虚频](experiment-report/figures/ts-imaginary-mode.gif) · [CI-NEB 峰顶虚频](experiment-report/figures/cineb-ci400-imaginary-mode.gif)
 
-## 内容与复现
+## 快速复现
+
+离线后处理不需要 Gaussian、ORCA 或集群连接，不启动新的量子计算。
+
+```bash
+git clone https://github.com/populuscathayana/Quantum3.git
+cd Quantum3
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+
+# 核对已有计算结果及报告数据
+python reproduce.py --check-only
+
+# 同时重绘能量与路径图
+python reproduce.py
+```
+
+派生图写到 `build/figures/`，计算文件和报告保持原样。具体环境及报告排版步骤见 [ENVIRONMENT.md](ENVIRONMENT.md)。
+
+## 文件结构
 
 | 目录 | 内容 |
 |---|---|
 | `experiment-report/` | 报告 PDF、TeX、11 幅报告图及 3 个动画 |
-| `sources/gaussian/` | 驻点、环加成 IRC 的输入/输出；驻点格式化检查点 |
-| `sources/orca/` | 环加成峰顶及构象 A/B/TS 的数值频率、Hessian、梯度和 TS 优化结果 |
-| `data/` | 热化学表、完整 IRC 点、NEB/CI-NEB 路径、结构及对照数据 |
+| `data/calculations/gaussian/` | 驻点、环加成 IRC 的输入/输出；驻点格式化检查点 |
+| `data/calculations/orca/` | 环加成峰顶及构象 A/B/TS 的数值频率、Hessian、梯度和 TS 优化结果 |
+| `data/manifest.json` | 科学文件的大小及 SHA256 清单 |
+| `analysis/` | 热化学表、完整 IRC 点、NEB/CI-NEB 路径、结构及对照数据 |
 | `scripts/` | 数据核对与移植后的绘图程序 |
-| `MANIFEST.json` | 科学文件的大小及 SHA256 清单 |
 
-```sh
-python -m pip install -r requirements.txt
-python reproduce.py --check-only
-python reproduce.py
-```
-
-默认将重绘结果写到 `build/figures/`：完整能量阶梯、NEB/CI-NEB/IRC 对照、Gibbs 图、完整 IRC 曲线/结构/动画。报告现有图保持原样。复现使用仓库内的数据和输出，不运行 Gaussian 或 ORCA。
-
-前线轨道等值面以成图形式提供；其原始波函数网格不纳入此轻量发布包。软件安装包、机器配置、调度记录和中间力调用文件保留在本地。
+数据索引见 [analysis/README.md](analysis/README.md)。公开输出只隐去机器路径等元数据，科学数值与软件声明保留。软件安装包、服务器连接、调度记录、二进制检查点和中间力调用文件不随仓库分发。

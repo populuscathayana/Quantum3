@@ -7,7 +7,7 @@ from figure_style import canvas, font, save, dashed, INK, MUTED, GRID, BLUE, ORA
 
 
 def main():
-    data = json.loads((ROOT/'data/thermochemistry.json').read_text())
+    data = json.loads((ROOT/'analysis/thermochemistry.json').read_text())
     relative = data['relative_to_separated_reactants_kcal_mol']
     levels = [dict(label='Separated reactants', job=None, x=440, G=0., G_raw=0.),
               dict(label='Encounter complex', job='reactant-endpoint-opt', x=880),
@@ -44,7 +44,7 @@ def main():
     d.text((90, 1410), 'Discrete RRHO free energies; connectors guide the eye. These are not the electronic energies along the IRC.', font=font(27), fill=MUTED)
     d.text((90, 1470), 'B is the IRC-connected product. The A/B interconversion pathway is under verification.', font=font(27), fill=MUTED)
     save(im, 'gibbs-free-energy-profile.png')
-    metadata = dict(source='data/thermochemistry.json',
+    metadata = dict(source='analysis/thermochemistry.json',
                     temperature_K=298.15, pressure_atm=1.,
                     levels=levels, figure='experiment-report/figures/gibbs-free-energy-profile.png',
                     quantity='Discrete RRHO Gibbs free energies with external rotational symmetry correction',

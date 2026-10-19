@@ -64,4 +64,4 @@ def draw(data):
     return FIG
 
 if __name__ == '__main__':
-    draw(json.loads((ROOT/'data/energy-ladder.json').read_text()))
+    draw(json.loads((ROOT/'analysis/energy-ladder.json').read_text()))

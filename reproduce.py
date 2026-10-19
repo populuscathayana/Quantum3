@@ -18,9 +18,9 @@ def main():
     if args.check_only:
         return
     output = args.output.resolve()
-    protected = [ROOT/'sources', ROOT/'data', ROOT/'experiment-report']
+    protected = [ROOT/'analysis', ROOT/'data', ROOT/'experiment-report']
     if any(output == p or p in output.parents for p in protected):
-        parser.error('Choose a derived-output directory outside sources, data and experiment-report')
+        parser.error('Choose a derived-output directory outside analysis, data and experiment-report')
     output.mkdir(parents=True, exist_ok=True)
     env = dict(os.environ, QUANTUM3_OUTPUT=str(output))
     for name in ['plot_energy_ladder.py', 'plot_paths.py', 'plot_gibbs.py', 'plot_irc.py']:

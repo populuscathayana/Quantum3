@@ -5,7 +5,7 @@ import sys
 from PIL import Image, ImageDraw
 from figure_style import ROOT, DEST, canvas, font, dashed, INK, MUTED, GRID, BLUE, ORANGE
 
-SOURCE=ROOT/'data/path-comparison.json'
+SOURCE=ROOT/'analysis/path-comparison.json'
 FIG=DEST/'neb-cineb-irc-comparison.png'
 GREY='#4c5365'
 

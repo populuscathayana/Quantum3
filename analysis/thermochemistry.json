@@ -21,7 +21,7 @@
   "jobs": {
     "ethylene-opt": {
       "job_id": "3009",
-      "source_directory": "sources/gaussian/ethylene-opt",
+      "source_directory": "data/calculations/gaussian/ethylene-opt",
       "fchk_sha256": "761069e53aef5308a266d5eedf6bfffe48b1599855ee61d0dd6c8fcc967bddc9",
       "temperature_K": 298.15,
       "pressure_atm": 1.0,
@@ -128,7 +128,7 @@
     },
     "butadiene-opt": {
       "job_id": "3010",
-      "source_directory": "sources/gaussian/butadiene-opt",
+      "source_directory": "data/calculations/gaussian/butadiene-opt",
       "fchk_sha256": "6795eb799d816100362aa88558f67926ce3c588b601cef4381f593aa42dc58ea",
       "temperature_K": 298.15,
       "pressure_atm": 1.0,
@@ -213,7 +213,7 @@
     },
     "cyclohexene-opt": {
       "job_id": "3011",
-      "source_directory": "sources/gaussian/cyclohexene-opt",
+      "source_directory": "data/calculations/gaussian/cyclohexene-opt",
       "fchk_sha256": "0b9870ab24614bbe1f80f29e1bfffce039ada3accb51795bd2eab893405ea5d7",
       "temperature_K": 298.15,
       "pressure_atm": 1.0,
@@ -310,7 +310,7 @@
     },
     "ts-opt": {
       "job_id": "3025",
-      "source_directory": "sources/gaussian/ts-opt",
+      "source_directory": "data/calculations/gaussian/ts-opt",
       "fchk_sha256": "d23eb4276e141814e73c8fd81f3cc23b9c84c7f60c58db7c47d0c5fc55a475cd",
       "temperature_K": 298.15,
       "pressure_atm": 1.0,
@@ -384,7 +384,7 @@
     },
     "product-endpoint-opt": {
       "job_id": "3303",
-      "source_directory": "sources/gaussian/product-endpoint-opt",
+      "source_directory": "data/calculations/gaussian/product-endpoint-opt",
       "fchk_sha256": "a8c3c91d5b1f7a3dfcb3ca5d3b81c6388b7b2fe0f3c75cd247b70f3a56ef09a3",
       "temperature_K": 298.15,
       "pressure_atm": 1.0,
@@ -471,7 +471,7 @@
     },
     "reactant-endpoint-opt": {
       "job_id": "3344",
-      "source_directory": "sources/gaussian/reactant-endpoint-opt",
+      "source_directory": "data/calculations/gaussian/reactant-endpoint-opt",
       "fchk_sha256": "6e002cecf1f9237b7fc7adfd2d363e30964d64e59717d63101accaee1b725db3",
       "temperature_K": 298.15,
       "pressure_atm": 1.0,
@@ -579,7 +579,7 @@
     },
     "cyclohexene-conf-ts": {
       "job_id": "3346",
-      "source_directory": "sources/gaussian/cyclohexene-conf-ts",
+      "source_directory": "data/calculations/gaussian/cyclohexene-conf-ts",
       "fchk_sha256": "ec6c8bddf62cb0032d1f8095020fded7e4f2c9dc30fe2bbc97b5bf05915ddccb",
       "temperature_K": 298.15,
       "pressure_atm": 1.0,

@@ -11,7 +11,7 @@
 | `cycloaddition-ci400/` | 环加成 CI 峰顶结构、模式及路径数据 |
 | `structures/` | 共同原子编号下的 XYZ 结构 |
 
-Gaussian 原始驻点文件在 `sources/gaussian/`；ORCA 数值频率、Hessian 和梯度在 `sources/orca/`。`.fchk` 是文本格式化检查点，`.hess` 是文本 Hessian，均可在不安装量子化学软件的情况下读取。输出副本隐去了主机名、个人工作目录及临时目录，计算数值保持原样。`MANIFEST.json` 核对发布文件的字节。
+Gaussian 原始驻点文件在 `data/calculations/gaussian/`；ORCA 数值频率、Hessian 和梯度在 `data/calculations/orca/`。`.fchk` 是文本格式化检查点，`.hess` 是文本 Hessian，均可在不安装量子化学软件的情况下读取。输出副本隐去了主机名、个人工作目录及临时目录，计算数值保持原样。`data/manifest.json` 核对发布文件的字节。
 
 能量阶梯以两个分离反应物的 Gaussian 电子能之和为零点。构象对照各程序采用自身 A/B 极小值；ORCA 各行统一采用独立端点频率计算的电子能。路径记录中的端点重新求能会有极小的网格旋转差异，保留各自原始值。
 
