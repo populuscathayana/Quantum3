@@ -1,0 +1,74 @@
+{
+  "modes": {
+    "gaussian-endo": {
+      "frequency_cm_1": 442.9556,
+      "max_display_displacement_A": 0.22,
+      "rotation_det": 0.9999999999999998
+    },
+    "gaussian-exo": {
+      "frequency_cm_1": 446.3433,
+      "max_display_displacement_A": 0.22,
+      "rotation_det": 1.0000000000000022
+    },
+    "orca-endo": {
+      "frequency_cm_1": 443.0245422678959,
+      "max_display_displacement_A": 0.22,
+      "rotation_det": 1.0000000000000016
+    },
+    "orca-exo": {
+      "frequency_cm_1": 445.6357650548732,
+      "max_display_displacement_A": 0.22,
+      "rotation_det": 1.000000000000001
+    }
+  },
+  "orbitals": {
+    "butadiene": {
+      "cube_sha256": "2b8d6052b08afc6f49c9bea2de90c7deb359407c635bc71530d5b193a686e050",
+      "energy_eV": -6.5187
+    },
+    "maleic-anhydride": {
+      "cube_sha256": "aa80d8ecc7fdef402b5211963c06637756527dda53b258862d368ed6f9c168d9",
+      "energy_eV": -3.3455
+    },
+    "endo": {
+      "phase_products_before_sign_choice": [
+        0.03404741915430095,
+        0.028127871924180637
+      ],
+      "fragment_RMSD_A": [
+        0.3094894951547189,
+        0.12021854801424385
+      ],
+      "LUMO_global_sign_reversed": false
+    },
+    "exo": {
+      "phase_products_before_sign_choice": [
+        -0.03416845493252737,
+        -0.02888174207694104
+      ],
+      "fragment_RMSD_A": [
+        0.3081813815439114,
+        0.11661337321358908
+      ],
+      "LUMO_global_sign_reversed": true
+    }
+  },
+  "mode_note": "Synchronized phase and normalized illustrative amplitude; not real-time dynamics or IRC.",
+  "orbital_note": "Rigidly fitted isolated ORCA orbitals at \u00b10.03 bohr^-3/2; rotation only, not a reaction trajectory.",
+  "files": {
+    "maleic-mode-endo-programs.gif": "6b48fe58f4276fab939f2a7a5ace6d59add461cace74aea72812d7195ee58c8f",
+    "maleic-mode-exo-programs.gif": "6c0e0abcf7b981cc4d6bd9a4d48777428789ba40a14a5ae17b3f84ccc4df62fa",
+    "maleic-mode-orca-exo.gif": "34abd0baa778d302eaccc93eaf570c3919d871b4d6e53c3cce38b43c5686fb19",
+    "maleic-mode-orca-endo.gif": "b4a26a46df0d81d80717e8521b7e3d1f56c2adc87d328379db019d22cc46910c",
+    "maleic-mode-gaussian-endo-exo.gif": "8f72d821ac676f88dbb6542e472c7f5ac1221b9f5b3095eba5e4ca1230461906",
+    "maleic-mode-orca-endo-exo.gif": "97e1753d957e66a2b8aae9475d47571fd3091a5b7efc3f2ea2b87e84769d50b4",
+    "maleic-mode-gaussian-endo.gif": "a7ef9e60fb829cfd7ff64f60217ab44b188143ed550f7d4accf5561f73245b00",
+    "maleic-mode-gaussian-exo.gif": "5c9f0ca4ca590c6ab1b672f81db8dcdfb20c7a7bc6f441425a163fdf2dbc375f",
+    "maleic-orbital-exo.png": "546cf0ce3590bcc02942016b88bbd59d78045f3129b9eb1e4b106e73d86a1fb3",
+    "maleic-orbital-endo-exo.png": "78a2a8292635bb89b211fb57fe4722247e0081149383a6bc033c28c51f3fca92",
+    "maleic-orbital-endo.png": "53c2f5afd5e5e4abfdf4602e07518ba50e0ad6ff170499cb9588eda496eb57c6",
+    "maleic-orbital-endo-exo.gif": "33d62be6318d5fd80608663487d5e72f9ddf73d0ac6c918bc715e1f0a0dc935e",
+    "maleic-orbital-endo.gif": "b9d846c81dc87dfb656f31ca85dfe41f7d30b1cec518baa0e67acb10944e34ea",
+    "maleic-orbital-exo.gif": "e0587b9642a79e2fb3420504935c60d7c86ade13cc8b5cce27067665e8a8f86d"
+  }
+}

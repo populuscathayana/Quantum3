@@ -1,0 +1,126 @@
+{
+  "orbitals": {
+    "butadiene": {
+      "source_directory": "Gau3-local-orca-maleic-da-20261021/butadiene/opt",
+      "source_gbw_sha256": "50cb925513282ebda566736d1328af1e4f283880cdbd0063ba7d96a5eed46c34",
+      "orbital_index_zero_based": 14,
+      "occupation": 2.0,
+      "energy_hartree": -0.239557,
+      "energy_eV": -6.5187,
+      "cube": "analysis/maleic-orbitals-20261021/butadiene/source.mo14a.cube",
+      "cube_sha256": "2b8d6052b08afc6f49c9bea2de90c7deb359407c635bc71530d5b193a686e050",
+      "command": [
+        "software/orca-6.1.1/orca_plot",
+        "source.gbw",
+        "-i"
+      ],
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "mode": "Existing-wavefunction plotting only; no SCF, optimization or path calculation",
+      "norm_integral": 1.0000003997376803,
+      "boundary_max_amplitude": 3.90375e-05,
+      "coordinate_max_error_A": 2.5670450285592006e-07,
+      "grid_shape": [
+        100,
+        100,
+        100
+      ],
+      "grid_steps_bohr": [
+        [
+          0.240739,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.200289,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.169618
+        ]
+      ],
+      "isovalue_bohr_m32": 0.03
+    },
+    "maleic-anhydride": {
+      "source_directory": "Gau3-local-orca-maleic-da-20261021/maleic-anhydride/opt",
+      "source_gbw_sha256": "34673338c088c3ee29c3a948b8a7e49f305ba35cf039d98164a652bd412db245",
+      "orbital_index_zero_based": 25,
+      "occupation": 0.0,
+      "energy_hartree": -0.122945,
+      "energy_eV": -3.3455,
+      "cube": "analysis/maleic-orbitals-20261021/maleic-anhydride/source.mo25a.cube",
+      "cube_sha256": "aa80d8ecc7fdef402b5211963c06637756527dda53b258862d368ed6f9c168d9",
+      "command": [
+        "software/orca-6.1.1/orca_plot",
+        "source.gbw",
+        "-i"
+      ],
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "mode": "Existing-wavefunction plotting only; no SCF, optimization or path calculation",
+      "norm_integral": 1.0000006809206015,
+      "boundary_max_amplitude": 0.000173631,
+      "coordinate_max_error_A": 2.631055294361589e-07,
+      "grid_shape": [
+        100,
+        100,
+        100
+      ],
+      "grid_steps_bohr": [
+        [
+          0.226861,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.199815,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.141414
+        ]
+      ],
+      "isovalue_bohr_m32": 0.03
+    }
+  },
+  "phase_samples": [
+    {
+      "pair": [
+        1,
+        5
+      ],
+      "orbital_amplitudes": [
+        -0.19111648416793542,
+        -0.17815009156605924
+      ]
+    },
+    {
+      "pair": [
+        4,
+        6
+      ],
+      "orbital_amplitudes": [
+        0.15788127680769182,
+        0.17815837629969222
+      ]
+    }
+  ],
+  "phase_products": [
+    0.034047419154301005,
+    0.02812787192418063
+  ],
+  "same_relative_phase_at_both_contacts": true,
+  "fragment_fit_RMSD_A": [
+    0.3094894951547193,
+    0.12021854801424385
+  ],
+  "sample_offset_A": 0.45,
+  "interpretation": "Both contact phase products have the same sign; one global sign choice makes both contacts constructive. These are isolated-fragment orbitals, not interacting-TS orbitals.",
+  "source": "https://www.faccts.de/docs/orca/6.1/manual/contents/utilitiesvisualization/plots.html"
+}

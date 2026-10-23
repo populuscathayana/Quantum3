@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "animations": [
+    {
+      "file": "maleic-mode-endo-programs.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-mode-exo-programs.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-mode-gaussian-endo-exo.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-mode-gaussian-endo.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-mode-gaussian-exo.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-mode-orca-endo-exo.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-mode-orca-endo.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-mode-orca-exo.gif",
+      "frames": 32,
+      "unique_frames": 17
+    },
+    {
+      "file": "maleic-orbital-endo-exo.gif",
+      "frames": 24,
+      "unique_frames": 24
+    },
+    {
+      "file": "maleic-orbital-endo.gif",
+      "frames": 24,
+      "unique_frames": 24
+    },
+    {
+      "file": "maleic-orbital-exo.gif",
+      "frames": 24,
+      "unique_frames": 24
+    }
+  ],
+  "links_valid": true,
+  "rounding_tests": 4
+}

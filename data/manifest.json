@@ -33,6 +33,58 @@
       "bytes": 91780,
       "sha256": "a7eb6c5dd4f7d3fad0e64975b68f636116c7ece73b2986c6864fd01b2a030f1e"
     },
+    "analysis/maleic-endo-exo-20261022/comparison-media-audit.json": {
+      "bytes": 3139,
+      "sha256": "5d52efda5087309347c3071e4b88dc898ed05eebc42c06fa340046c0cc0ffcb4"
+    },
+    "analysis/maleic-endo-exo-20261022/comparison-media-checks.json": {
+      "bytes": 1232,
+      "sha256": "986bd38715e33bd8cf97f1809c806005d15da0dbd6dd7b4bd9fff2418d7098c2"
+    },
+    "analysis/maleic-endo-exo-20261022/endo-exo-energy-comparison.json": {
+      "bytes": 874,
+      "sha256": "78a69d46619f727a11833d1421e12a7ceb0b8851cc0343b3988f6d36df370039"
+    },
+    "analysis/maleic-endo-exo-20261022/exo-gaussian-independent-audit.json": {
+      "bytes": 7779,
+      "sha256": "1be9378befae055093ae20be8f3f5008074cca3d2822f938c2934c0dde910642"
+    },
+    "analysis/maleic-endo-exo-20261022/exo-orca-independent-audit.json": {
+      "bytes": 4853,
+      "sha256": "e59aedc9d66159a61230cf07a8481256b87af660825577324f8277a997507425"
+    },
+    "analysis/maleic-endo-exo-20261022/exo-thermochemistry.json": {
+      "bytes": 10290,
+      "sha256": "7e31cc9ef4cfd7c5781ab71cb3aece04f5d1f34cb45d5803af424a05343c8658"
+    },
+    "analysis/maleic-endo-exo-20261022/figure-audit.json": {
+      "bytes": 17358,
+      "sha256": "69f03580459766c736b5b2c3299b300e58b60c8d773d0423db0e87df7e1f0f52"
+    },
+    "analysis/maleic-endpoints-review-20261021/audit.json": {
+      "bytes": 10524,
+      "sha256": "8e9dabb22a807e9e4fe56a906a5c7511d93273958d0bd249b3c794616565fef9"
+    },
+    "analysis/maleic-orbitals-20261021/audit.json": {
+      "bytes": 3374,
+      "sha256": "f1fa9a44114690a5a6cbb4ae52efda55adec9f839b7ebda81b3098aa18741c65"
+    },
+    "analysis/maleic-orbitals-20261021/levels.json": {
+      "bytes": 1416,
+      "sha256": "562d53ef6e4fe45478b4b76e79ff91ad441b915d3a00e01c0477d1892eb899d4"
+    },
+    "analysis/maleic-postprocessing-20261021/data.json": {
+      "bytes": 306866,
+      "sha256": "f5f40f1f60ac764a5abb86dfd1bc02e8f4e96f5b22b7966586729018087bb328"
+    },
+    "analysis/maleic-stage1-review-20261021/audit.json": {
+      "bytes": 29667,
+      "sha256": "7fde92dd94730bc3577e2eb2a65e9a72b28da52023e1ad516391fced62aa1ad1"
+    },
+    "analysis/maleic-ts-review-20261021/audit.json": {
+      "bytes": 7526,
+      "sha256": "d5bb0e75ac37c2e718d3dd5eba0ccf4477e5ad64fb8a0eef305b0d9253d20861"
+    },
     "analysis/path-comparison.json": {
       "bytes": 36420,
       "sha256": "806ce1da69c00b92c69a770df807eb1bc1a4b4b948f99148d1ad43c557b5dfbd"
@@ -262,64 +314,180 @@
       "sha256": "2f5c78f02ed46369fb5fb17d1f79d070067f0ad9e3738a4e8b7dcba5a31e40eb"
     },
     "experiment-report/cycloaddition_mechanism.tex": {
-      "bytes": 29603,
-      "sha256": "510c6ec50cb0f07e18a518360843448ad3e0aed066d6561487b262d40e0b36ec"
+      "bytes": 45446,
+      "sha256": "728d69fb118ce84f7ca721cbd583679b87f8722d2e0ad8884c08a078d43dabb6"
     },
     "experiment-report/figures/cineb-ci400-imaginary-mode.gif": {
       "bytes": 342409,
       "sha256": "9e19048a090ee91d359ae4c2228b44aff764cda1de49819e8c5d597b097f9cb7"
     },
     "experiment-report/figures/cineb-ci400-review.png": {
-      "bytes": 157653,
-      "sha256": "83ac63b6590a646594f7b24de13cb86717875b27f4a1edd22082ebe971ebbac2"
+      "bytes": 84547,
+      "sha256": "2b14d9cac08718614b0d1f1d276b1844580b58ec2c0e6d040230a61fa29a92e1"
+    },
+    "experiment-report/figures/complete-reaction-evidence-map.png": {
+      "bytes": 254089,
+      "sha256": "20ecc1aa5f720626c6a3d99d997c879be763321e497a36255d14bc775cae2ec9"
     },
     "experiment-report/figures/electronic-energy-ladder-complete.png": {
-      "bytes": 240971,
-      "sha256": "aea7a666fa4b8391de4b71d73e66bab15660fd5b25fd6b1009dcee48695aaa4a"
+      "bytes": 157234,
+      "sha256": "e07f20aebe3af1bc7fe954ec5d152ad9a530da6aff885aa8b2417120d72bcad5"
+    },
+    "experiment-report/figures/electronic-energy-profile.png": {
+      "bytes": 72159,
+      "sha256": "96ab34a68f876d17b927d17bf9c51df1d7967ed9a5d7805809d5bb64d886f5b8"
     },
     "experiment-report/figures/frontier-orbital-levels.png": {
-      "bytes": 86595,
-      "sha256": "b5736920b32fdd282b569902fbb92fb84a4f09c743e30321af822a370463dbb0"
+      "bytes": 68366,
+      "sha256": "96843803a7722ede80f5017d55a2065b071c3354c7590682479ae0d1fa6dda8a"
     },
     "experiment-report/figures/frontier-orbital-surfaces.png": {
-      "bytes": 321241,
-      "sha256": "ad8cca4758134f4c3d8eaebd2d4e5744e8a16bcb406b23dc7bf45e24207ba5c3"
+      "bytes": 280783,
+      "sha256": "e5c60d059d098864dfe40c5896fad4c164628ed912fdb4ed9f8b787bba659465"
     },
     "experiment-report/figures/frontier-phase-matching.png": {
-      "bytes": 338728,
-      "sha256": "c801bf1f7edbea6b1858f13d879060f2ca5134e196ed8d860e825fef106e4627"
+      "bytes": 293294,
+      "sha256": "1b18c8e893fc7344a982d3a7a85a5133df5b88c76695dcec9019c16b6d07dd3a"
     },
     "experiment-report/figures/gibbs-free-energy-profile.png": {
-      "bytes": 124579,
-      "sha256": "5130c4fb485be4173fbe34b4e3ce2cf153d9e8e84858021b198f70c29277d28e"
+      "bytes": 71854,
+      "sha256": "32343edc7848f90a02eb59f3255ca277ee5f5663c4e65f33250b9995e237a706"
     },
     "experiment-report/figures/irc-full-path.gif": {
       "bytes": 2487580,
       "sha256": "81c19a1ef650ef22d1f895a18cdcee23f65d1989b075d42e78a7d054a1ba2c1e"
     },
     "experiment-report/figures/irc-full-profile.png": {
-      "bytes": 110108,
-      "sha256": "f8b547f96142701770013ada888c2f3fe2f5495528aaf39031642ac8e8746090"
+      "bytes": 93355,
+      "sha256": "9e0fe7c7712d9cec7ed433884f588ebe7a34e8f4a2c29ace0bd4e808e2d25f80"
     },
     "experiment-report/figures/irc-full-structures.png": {
-      "bytes": 81577,
-      "sha256": "c41237cf10c048fcfe8adb31c0cdd398e21ea741bf16835df464cd80a591d0fd"
+      "bytes": 64434,
+      "sha256": "62f3cf67f16f426dd9d1575b3bff57d95cd308679018d4bd7fdc8dc75ba1cfc1"
+    },
+    "experiment-report/figures/irc-reverse-path.gif": {
+      "bytes": 883038,
+      "sha256": "1a2819a22f137cd2232adcf98510abcfcb8fd02e2cfbf5c222c2d39cb17c715f"
+    },
+    "experiment-report/figures/irc-reverse-profile.png": {
+      "bytes": 107540,
+      "sha256": "c9984c5e6050bd69b68290d32897d257b87506a69e3f073be33b053dfb205482"
+    },
+    "experiment-report/figures/irc-reverse-structures.png": {
+      "bytes": 97703,
+      "sha256": "6943465d43467e83089842a06cf0275aaf2d851f2261d654363c2389fc4ddcde"
+    },
+    "experiment-report/figures/maleic-endo-exo-ts.png": {
+      "bytes": 48957,
+      "sha256": "c02f16282f42690a25c4c946997e558e24d36edda9f59be5d50c0dd8441c07fd"
+    },
+    "experiment-report/figures/maleic-energy-levels.png": {
+      "bytes": 74464,
+      "sha256": "2c6887de7b4bc6dc6e068c3c32beae5bcb4ccc9fca58d08013a48675adb3ac8f"
+    },
+    "experiment-report/figures/maleic-frontier-levels.png": {
+      "bytes": 60579,
+      "sha256": "29fce433d4397948827af1cbe6aab488496bb40afbcb16ac636cc0c3f4347855"
+    },
+    "experiment-report/figures/maleic-frontier-phases.png": {
+      "bytes": 315543,
+      "sha256": "bf2aed3d077bfc58fc628d5983b89832210d4232264b084f05e982cdc0bcdb89"
+    },
+    "experiment-report/figures/maleic-gaussian-irc.gif": {
+      "bytes": 657860,
+      "sha256": "79d8da11446e7e8edd2451e196825fdbe9f732b2655722ac710ce7a225b36d0e"
+    },
+    "experiment-report/figures/maleic-gaussian-irc.png": {
+      "bytes": 87101,
+      "sha256": "22157871e7689b78575d407f9b80775ea46a5f088c3724ed00e23d3118257c86"
+    },
+    "experiment-report/figures/maleic-mode-endo-programs.gif": {
+      "bytes": 565338,
+      "sha256": "6b48fe58f4276fab939f2a7a5ace6d59add461cace74aea72812d7195ee58c8f"
+    },
+    "experiment-report/figures/maleic-mode-exo-programs.gif": {
+      "bytes": 618668,
+      "sha256": "6c0e0abcf7b981cc4d6bd9a4d48777428789ba40a14a5ae17b3f84ccc4df62fa"
+    },
+    "experiment-report/figures/maleic-mode-gaussian-endo-exo.gif": {
+      "bytes": 428252,
+      "sha256": "8f72d821ac676f88dbb6542e472c7f5ac1221b9f5b3095eba5e4ca1230461906"
+    },
+    "experiment-report/figures/maleic-mode-gaussian-endo.gif": {
+      "bytes": 213654,
+      "sha256": "a7ef9e60fb829cfd7ff64f60217ab44b188143ed550f7d4accf5561f73245b00"
+    },
+    "experiment-report/figures/maleic-mode-gaussian-exo.gif": {
+      "bytes": 221022,
+      "sha256": "5c9f0ca4ca590c6ab1b672f81db8dcdfb20c7a7bc6f441425a163fdf2dbc375f"
+    },
+    "experiment-report/figures/maleic-mode-orca-endo-exo.gif": {
+      "bytes": 431241,
+      "sha256": "97e1753d957e66a2b8aae9475d47571fd3091a5b7efc3f2ea2b87e84769d50b4"
+    },
+    "experiment-report/figures/maleic-mode-orca-endo.gif": {
+      "bytes": 214393,
+      "sha256": "b4a26a46df0d81d80717e8521b7e3d1f56c2adc87d328379db019d22cc46910c"
+    },
+    "experiment-report/figures/maleic-mode-orca-exo.gif": {
+      "bytes": 222633,
+      "sha256": "34abd0baa778d302eaccc93eaf570c3919d871b4d6e53c3cce38b43c5686fb19"
+    },
+    "experiment-report/figures/maleic-orbital-endo-exo.gif": {
+      "bytes": 4733468,
+      "sha256": "33d62be6318d5fd80608663487d5e72f9ddf73d0ac6c918bc715e1f0a0dc935e"
+    },
+    "experiment-report/figures/maleic-orbital-endo-exo.png": {
+      "bytes": 455916,
+      "sha256": "78a2a8292635bb89b211fb57fe4722247e0081149383a6bc033c28c51f3fca92"
+    },
+    "experiment-report/figures/maleic-orbital-endo.gif": {
+      "bytes": 2271066,
+      "sha256": "b9d846c81dc87dfb656f31ca85dfe41f7d30b1cec518baa0e67acb10944e34ea"
+    },
+    "experiment-report/figures/maleic-orbital-endo.png": {
+      "bytes": 232084,
+      "sha256": "53c2f5afd5e5e4abfdf4602e07518ba50e0ad6ff170499cb9588eda496eb57c6"
+    },
+    "experiment-report/figures/maleic-orbital-exo.gif": {
+      "bytes": 2353567,
+      "sha256": "e0587b9642a79e2fb3420504935c60d7c86ade13cc8b5cce27067665e8a8f86d"
+    },
+    "experiment-report/figures/maleic-orbital-exo.png": {
+      "bytes": 222049,
+      "sha256": "546cf0ce3590bcc02942016b88bbd59d78045f3129b9eb1e4b106e73d86a1fb3"
+    },
+    "experiment-report/figures/maleic-structures-mode.png": {
+      "bytes": 93422,
+      "sha256": "e1ddc4f51021398c415e6302b0c377396b877025ea1f42d114985d07f1acebfa"
+    },
+    "experiment-report/figures/maleic-structures-multiview.png": {
+      "bytes": 153769,
+      "sha256": "3a2b365e8882bb8ee9d3009f138e3dd79ae70533db460eea810cd28ab85cb88e"
+    },
+    "experiment-report/figures/maleic-ts-imaginary-mode.gif": {
+      "bytes": 331933,
+      "sha256": "d0976078086db3a66345d0076786a1a8aea751436c8e25797fca57cd6e558f5a"
     },
     "experiment-report/figures/neb-cineb-irc-comparison.png": {
-      "bytes": 189598,
-      "sha256": "fd25307effa99993342d0fcd1f390ad7f3db31a49d9ac39fc34abc8a790b01e3"
+      "bytes": 120495,
+      "sha256": "d7dc0917c333f7162c937da0a6a9c26a0247e642a0dc0f70824f995e70d1fc05"
     },
     "experiment-report/figures/optimized-structures.png": {
-      "bytes": 112603,
-      "sha256": "e4b48de9906265e4d8c5d4df524da7e55a31d82cbce8aacd179bdf73b49e0e02"
+      "bytes": 67763,
+      "sha256": "26e9d2cd59c912556e3dd36d641b47d3d78740603787edf63af184d228aa6e5b"
     },
     "experiment-report/figures/ts-imaginary-mode.gif": {
       "bytes": 971509,
       "sha256": "1a1101152a4a550ed243cf76a3311dd35d4df8afba7c24c512df0e770b614571"
     },
     "experiment-report/figures/ts-imaginary-mode.png": {
-      "bytes": 70675,
-      "sha256": "8e51817c463e628672e740f767cb4e823a678784f0122241a7c16e442e3800f0"
+      "bytes": 20456,
+      "sha256": "8dcd2caf00208e4fa9dd956d4e90938131f332fa944bcc33bb47c675b2625a14"
+    },
+    "experiment-report/maleic-media.html": {
+      "bytes": 2876,
+      "sha256": "169fdf70b75f871cfb52ea9887609216ab0ff070208bff51c4976be764d859b9"
     }
   }
 }

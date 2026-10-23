@@ -1,0 +1,46 @@
+{
+  "orbitals": {
+    "butadiene": {
+      "HOMO": {
+        "occupation": 2.0,
+        "energy_hartree": -0.239557,
+        "energy_eV": -6.5187,
+        "index_zero_based": 14
+      },
+      "LUMO": {
+        "occupation": 0.0,
+        "energy_hartree": -0.036477,
+        "energy_eV": -0.9926,
+        "index_zero_based": 15
+      },
+      "source_output": "Gau3-local-orca-maleic-da-20261021/butadiene/opt/calc.out",
+      "source_sha256": "7a557e607d8f2b914a080d036d48db769270a5136ba6fdaa3da235e888935bbf"
+    },
+    "maleic-anhydride": {
+      "HOMO": {
+        "occupation": 2.0,
+        "energy_hartree": -0.305526,
+        "energy_eV": -8.3138,
+        "index_zero_based": 24
+      },
+      "LUMO": {
+        "occupation": 0.0,
+        "energy_hartree": -0.122945,
+        "energy_eV": -3.3455,
+        "index_zero_based": 25
+      },
+      "source_output": "Gau3-local-orca-maleic-da-20261021/maleic-anhydride/opt/calc.out",
+      "source_sha256": "1c80d62cbba96e97b46feb1645e87191de5e641d4971490ab8adf199879f5396"
+    }
+  },
+  "forward_gap_eV": 3.1732,
+  "reverse_gap_eV": 7.3212,
+  "shared_by_approaches": [
+    "endo",
+    "exo"
+  ],
+  "display_decimals": 2,
+  "figure": "experiment-report/figures/maleic-frontier-levels.png",
+  "figure_sha256": "29fce433d4397948827af1cbe6aab488496bb40afbcb16ac636cc0c3f4347855",
+  "note": "Isolated optimized ORCA fragment orbital energies, not activation barriers."
+}

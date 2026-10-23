@@ -9,7 +9,29 @@ B3LYP-D3(BJ)/def2-SVP 气相计算：环加成过渡态、双向 IRC、NEB/CI-NE
 
 相关实验：[Quantum1](https://github.com/populuscathayana/Quantum1) · [Quantum2](https://github.com/populuscathayana/Quantum2) · [Quantum4](https://github.com/populuscathayana/Quantum4)
 
-报告共 15 页，含 11 幅图；正文末尾“数据与代码”节注明仓库地址，封面保持原样。
+## 2026-10-23 成果更新
+
+新版 LaTeX 源码已加入丁二烯＋顺丁烯二酸酐 endo/exo 的 Gaussian／ORCA 驻点对照、热化学、轨道正侧视图和两反应体系汇总表。正文末尾“数据与代码”节采用与 Quantum4 相同的无编号标题、说明文字及独立链接，封面不加仓库链接。
+
+**PDF 版本：上方 PDF 仍为 2026-10-19 的 15 页版本，不包含本次新增酸酐结果。** 新版以当前 `.tex`、图表及数据为准；本次不以旧 PDF 冒充新版。源码可用配置好中文字体的 XeLaTeX 编译。
+
+- [酸酐各自与并排对照动画索引（下载后浏览器打开）](experiment-report/maleic-media.html)
+- [endo/exo 能量与自由能数据](analysis/maleic-endo-exo-20261022/endo-exo-energy-comparison.json)
+- [HOMO／LUMO 能级数据](analysis/maleic-orbitals-20261021/levels.json)
+- [新成果审核清单](data/publication-20261023.json)
+- [后处理源码与复核说明](scripts/maleic-source/README.md)
+
+| Gaussian 相同分离反应物参照 | 乙烯 | 酸酐 endo | 酸酐 exo |
+|---|---:|---:|---:|
+| 电子能垒 / kcal mol⁻¹ | 12.95 | 2.55 | 4.99 |
+| 活化自由能 / kcal mol⁻¹ | 26.47 | 17.16 | 19.28 |
+| 成键虚频 / cm⁻¹ | 517.2i | 443.0i | 446.3i |
+
+自由能为 298.15 K、1 atm 下经转动对称数修正的 RRHO 值。酸酐 exo 栏为过渡态结果，不据此指定其产物连接；完整 endo Gaussian IRC 数据单独保留。轨道等值面来自真实波函数，虚频动画展示模式位移而非时间动力学。
+
+![酸酐 endo/exo 过渡态正侧视](experiment-report/figures/maleic-endo-exo-ts.png)
+
+![酸酐前线轨道能级](experiment-report/figures/maleic-frontier-levels.png)
 
 ## 主要结果
 

@@ -1,0 +1,24 @@
+{
+  "temperature_K": 298.15,
+  "pressure_atm": 1,
+  "reference": "same-program separated reactants",
+  "free_energy": "RRHO with independently audited rotational symmetry",
+  "programs": {
+    "Gaussian": {
+      "E_exo_barrier_kcal_mol": 4.989477792352763,
+      "E_endo_barrier_kcal_mol": 2.5517476048334653,
+      "E_exo_minus_endo_kcal_mol": 2.4377301875192976,
+      "G_exo_barrier_kcal_mol": 19.28027994734854,
+      "G_endo_barrier_kcal_mol": 17.156160377657365,
+      "G_exo_minus_endo_kcal_mol": 2.1241195696911745
+    },
+    "ORCA": {
+      "E_exo_barrier_kcal_mol": 4.9862548315526976,
+      "E_endo_barrier_kcal_mol": 2.552894617813042,
+      "E_exo_minus_endo_kcal_mol": 2.4333602137396557,
+      "G_exo_barrier_kcal_mol": 19.419541968911144,
+      "G_endo_barrier_kcal_mol": 17.227852179026556,
+      "G_exo_minus_endo_kcal_mol": 2.191689789884588
+    }
+  }
+}
